@@ -27,14 +27,14 @@ export default function ChoiceModal({
             onClick={onCancel}
             className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
           >
-            Cancel
+            <h3>onderbouw</h3><br></br>
           </button>
 
           <button
             onClick={onConfirm}
             className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
           >
-            Confirm
+            <h3>bovenbouw</h3><br></br>
           </button>
         </div>
       </div>
