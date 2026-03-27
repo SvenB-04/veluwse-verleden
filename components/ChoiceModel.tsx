@@ -28,6 +28,8 @@ export default function ChoiceModal({
             className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
           >
             <h3>onderbouw</h3><br></br>
+            <p>groep 3 t/m 5</p><br></br>
+            <p>leeftijd 6 t/m 9</p>
           </button>
 
           <button
@@ -35,6 +37,8 @@ export default function ChoiceModal({
             className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
           >
             <h3>bovenbouw</h3><br></br>
+            <p>groep 6 t/m 2e jaar</p><br></br>
+            <p>leeftijd 10 t/m 14</p>
           </button>
         </div>
       </div>
