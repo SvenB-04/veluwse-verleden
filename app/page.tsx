@@ -14,7 +14,7 @@ export default function Home() {
                     className="px-4 py-2 rounded"
                 >
                     <Image
-                        src={"/veluws-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
+                        src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
                         width={1000}
                         height={400}
                         alt="schoolplaat graafhuevels"

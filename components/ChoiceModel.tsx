@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 type ChoiceModalProps = {
   isOpen: boolean;
   message: string;
@@ -20,7 +18,7 @@ export default function ChoiceModal({
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
       <div className="bg-white p-6 rounded-2xl shadow-xl w-96 text-center">
-        <p className="mb-6 text-lg">{message}</p>
+        <p className="mb-6 text-black">{message}</p>
 
         <div className="flex justify-center gap-4">
           <button
