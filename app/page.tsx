@@ -16,7 +16,7 @@ export default function Home() {
                     <Image
                         src={"/veluws-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
                         width={1000}
-                        height={100}
+                        height={400}
                         alt="schoolplaat graafhuevels"
                         loading="eager"
                     />
@@ -24,9 +24,12 @@ export default function Home() {
                 <ChoiceModal
                     isOpen={open}
                     message="zit jij in de boven- of onderbouw?"
-                    onCancel={() => setOpen(false)}
+                    onCancel={() => {
+                        <link href="/kleding/onderbouw"></link>
+                        setOpen(false)
+                    } }
                     onConfirm={() => {
-                        console.log("Confirmed!");
+                        <link href="/kleding/bovenbouw"></link>
                         setOpen(false);
                     }}
                 />
