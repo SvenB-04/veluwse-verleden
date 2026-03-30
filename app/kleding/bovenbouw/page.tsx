@@ -15,6 +15,7 @@ export default function kleding_boven() {
                     alt="bronze tijd hoofdwaar"
                     loading="eager"
                     id="example_top"
+                    className="items-right justify-right"
                 />
                 <Image
                     src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
@@ -23,6 +24,7 @@ export default function kleding_boven() {
                     alt="bronze tijd borstwaar"
                     loading="eager"
                     id="example_middle"
+                    className="items-right justify-right"
                 />
                 <Image
                     src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
@@ -31,6 +33,7 @@ export default function kleding_boven() {
                     alt="bronze tijd beenwaar"
                     loading="eager"
                     id = "example_bottom"
+                    className="items-right justify-right"
                 />
                 <KledingBovenKnoppen
                 laatIn={() => {
