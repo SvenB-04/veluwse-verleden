@@ -30,7 +30,7 @@ export default function kleding_boven() {
                     height={100}
                     alt="bronze tijd beenwaar"
                     loading="eager"
-                    id="example_bottom"
+                    id = "example_bottom"
                 />
                 <KledingBovenKnoppen
                 laatIn={() => {
@@ -40,15 +40,24 @@ export default function kleding_boven() {
                                 //generate a new gast
                             }
                             else{
-                                //game over
+                                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                    <button>probeer opnieuw</button>
+                                    <button>kies een andere verhaallijn</button>
+                                </div>
                             }
                         }
                         else{
-                            //gameover
+                            <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                <button>probeer opnieuw</button>
+                                <button>kies een andere verhaallijn</button>
+                            </div>
                         }
                     }
                     else{
-                        //gameover
+                        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                            <button>probeer opnieuw</button>
+                            <button>kies een andere verhaallijn</button>
+                        </div>
                     }
                 }}
                 laatUit={() =>{
@@ -58,15 +67,24 @@ export default function kleding_boven() {
                                 //generate a new gast
                             }
                             else{
-                                //gameover
+                                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                    <button>probeer opnieuw</button>
+                                    <button>kies een andere verhaallijn</button>
+                                </div>
                             }
                         }
                         else{
-                            //gameover
+                            <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                <button>probeer opnieuw</button>
+                                <button>kies een andere verhaallijn</button>
+                            </div>
                         }
                     }
                     else{
-                        //gameover
+                        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                            <button>probeer opnieuw</button>
+                            <button>kies een andere verhaallijn</button>
+                        </div>
                     }
                 }}
                 />

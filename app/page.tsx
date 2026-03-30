@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link'
 import Image from "next/image";
 import { useState } from "react";
 import ChoiceModal from "@/components/ChoiceModel";
@@ -25,11 +26,11 @@ export default function Home() {
                     isOpen={open}
                     message="zit jij in de boven- of onderbouw?"
                     onCancel={() => {
-                        <link href="/kleding/onderbouw"></link>
+                        <Link href="/kleding/onderbouw"></Link>
                         setOpen(false)
                     } }
                     onConfirm={() => {
-                        <link href="/kleding/bovenbouw"></link>
+                        <Link href="/kleding/bovenbouw"></Link>
                         setOpen(false);
                     }}
                 />
