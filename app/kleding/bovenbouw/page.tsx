@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
+import Link from 'next/link'
 import Image from "next/image";
 import KledingBovenKnoppen from "@/components/KledingBovenKnoppen";
 
 export default function kleding_boven() {
-
+    const [score, setScore] = useState(0);
     return(
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
             <div>
@@ -37,56 +39,70 @@ export default function kleding_boven() {
                 />
                 <KledingBovenKnoppen
                 laatIn={() => {
-                    if (example_top = gast_top) {
-                        if (example_middle = gast_middle) {
-                            if (example_bottom = gast_bottom) {
+                    if (document.getElementById("example_top")?.getAttribute("src") === document.getElementById("gast_top")?.getAttribute("src")) {
+                        if (document.getElementById("example_middle")?.getAttribute("src") === document.getElementById("gast_middle")?.getAttribute("src")) {
+                            if (document.getElementById("example_bottom")?.getAttribute("src") === document.getElementById("gast_bottom")?.getAttribute("src")) {
                                 //generate a new gast
+                                setScore(score + 1);
                             }
                             else{
                                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                    <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
+                                    <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
                                     <button>probeer opnieuw</button>
-                                    <button>kies een andere verhaallijn</button>
+                                    <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                                 </div>
                             }
                         }
                         else{
                             <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
+                                <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
                                 <button>probeer opnieuw</button>
-                                <button>kies een andere verhaallijn</button>
+                                <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                             </div>
                         }
                     }
                     else{
                         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                            <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
+                            <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
                             <button>probeer opnieuw</button>
-                            <button>kies een andere verhaallijn</button>
+                            <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                         </div>
                     }
                 }}
                 laatUit={() =>{
-                    if (example_top != gast_top) {
-                        if (example_middle != gast_middle) {
-                            if (example_bottom != gast_bottom) {
+                    if (document.getElementById("example_top")?.getAttribute("src") !== document.getElementById("gast_top")?.getAttribute("src")) {
+                        if (document.getElementById("example_middle")?.getAttribute("src") !== document.getElementById("gast_middle")?.getAttribute("src")) {
+                            if (document.getElementById("example_bottom")?.getAttribute("src") !== document.getElementById("gast_bottom")?.getAttribute("src")) {
                                 //generate a new gast
+                                setScore(score + 1);
                             }
                             else{
                                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                    <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
+                                    <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
                                     <button>probeer opnieuw</button>
-                                    <button>kies een andere verhaallijn</button>
+                                    <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                                 </div>
                             }
                         }
                         else{
                             <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                                <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
+                                <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
                                 <button>probeer opnieuw</button>
-                                <button>kies een andere verhaallijn</button>
+                                <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                             </div>
                         }
                     }
                     else{
                         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                            <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
+                            <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
                             <button>probeer opnieuw</button>
-                            <button>kies een andere verhaallijn</button>
+                            <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                         </div>
                     }
                 }}
