@@ -25,6 +25,9 @@ export default function kleding_boven() {
     const [currenttop, setCurrenttop] = useState(imagetop[0]);
     const [currentmiddle, setCurrentmiddle] = useState(imagemiddle[0]);
     const [currentbottom, setCurrentbottom] = useState(imagebottom[0]);
+    const handleReset = () => {
+        window.location.reload();
+    };
     function changeimage() {
         const randomIndex = Math.floor(Math.random() * imagetop.length);
         setCurrenttop(imagetop[randomIndex]);
@@ -33,8 +36,11 @@ export default function kleding_boven() {
     }
     
     return(
-        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <div className="h-screen flex items-center justify-center">
+        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black dark:text-white grid grid-cols-3 gap-4">
+            <div className="items-left justify-left">
+                <h1 className="text-2xl font-bold mb-4">Kleding Bovenbouw</h1>
+            </div>
+            <div className="items-center justify-center">
                 <Image
                     src={currenttop}
                     width={200}
@@ -57,7 +63,7 @@ export default function kleding_boven() {
                     id="gast_bottom"
                 />
             </div>
-            <div>
+            <div className="items-right justify-right">
                 <Image
                     src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
                     width={100}
@@ -97,7 +103,7 @@ export default function kleding_boven() {
                                     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                                         <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
                                         <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                        <button>probeer opnieuw</button>
+                                        <button onClick={handleReset}>probeer opnieuw</button>
                                         <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                                     </div>
                                 }
@@ -106,7 +112,7 @@ export default function kleding_boven() {
                                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                                     <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
                                     <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                    <button>probeer opnieuw</button>
+                                    <button onClick={handleReset}>probeer opnieuw</button>
                                     <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                                 </div>
                             }
@@ -115,7 +121,7 @@ export default function kleding_boven() {
                             <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                                 <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
                                 <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                <button>probeer opnieuw</button>
+                                <button onClick={handleReset}>probeer opnieuw</button>
                                 <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                             </div>
                         }
@@ -132,7 +138,7 @@ export default function kleding_boven() {
                                     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                                         <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
                                         <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                        <button>probeer opnieuw</button>
+                                        <button onClick={handleReset}>probeer opnieuw</button>
                                         <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                                     </div>
                                 }
@@ -141,7 +147,7 @@ export default function kleding_boven() {
                                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                                     <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
                                     <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                    <button>probeer opnieuw</button>
+                                    <button onClick={handleReset}>probeer opnieuw</button>
                                     <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                                 </div>
                             
@@ -151,7 +157,7 @@ export default function kleding_boven() {
                             <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                                 <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
                                 <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                <button>probeer opnieuw</button>
+                                <button onClick={handleReset}>probeer opnieuw</button>
                                 <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
                             </div>
                         }
