@@ -11,6 +11,7 @@ export default function kleding_boven() {
     const [timeLeft, setTimeLeft] = useState(120);
     const [gameOver, setGameOver] = useState(false);
     const imagetop = [
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute een en voor de goede abeelding drie
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/clothing character design.png",
         "/Schermafbeelding_20221209_131843.png",
@@ -19,6 +20,7 @@ export default function kleding_boven() {
     ];
 
     const imagemiddle = [
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute een en voor de goede abeelding drie
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/clothing character design.png",
         "/Schermafbeelding_20221209_131843.png",
@@ -26,12 +28,14 @@ export default function kleding_boven() {
         "/clothing character design.png",
     ];
     const imagebottom = [
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute een en voor de goede abeelding drie
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/clothing character design.png",
         "/Schermafbeelding_20221209_131843.png",
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/8f3d7702ea124824ba92a0e1292d334d.png",
     ];
+    //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
     const exampleTop = "/Schermafbeelding_20221209_131843.png";
     const exampleMiddle = "/clothing character design.png";
     const exampleBottom = "/8f3d7702ea124824ba92a0e1292d334d.png";
