@@ -35,7 +35,7 @@ export default function kleding_boven() {
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/8f3d7702ea124824ba92a0e1292d334d.png",
     ];
-    //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
+    //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode
     const exampleTop = "/Schermafbeelding_20221209_131843.png";
     const exampleMiddle = "/clothing character design.png";
     const exampleBottom = "/8f3d7702ea124824ba92a0e1292d334d.png";
@@ -67,8 +67,8 @@ export default function kleding_boven() {
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black dark:text-white grid grid-cols-3 gap-4">
             <div className="items-left justify-left">
                 <h1 className="text-2xl font-bold mb-4">Kleding Bovenbouw</h1>
-                <p className="mb-4">maak geen fouten voor 120 seconden en verzamel punten</p>
-                <p className="text-lg">Time left: {timeLeft} seconds</p>
+                <p className="mb-4">je vader heeft jouw de taak gegeven als bewaker laat de mensen met bekende kledingstukken binnen en laat andere uit over 2 minuten komt de volgende waak rotatie</p>
+                <p className="text-lg">Tijd over: {timeLeft} seconden</p>
             </div>
             <div className="items-center justify-center">
                 <Image
@@ -146,7 +146,7 @@ export default function kleding_boven() {
             {showIncorrectAlert && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                     <div className="grid-cols-2">
-                        <h2 className="text-white text-2xl mb-4 col-span-2">Helaas, dat is niet correct. je hebt {timeLeft} seconden over.</h2>
+                        <h2 className="text-white text-2xl mb-4 col-span-2">Helaas, dat is niet correct en je hebt iemand binnen gelaten die hier niet hoort. je hebt {timeLeft} seconden over.</h2>
                         <p className="text-white mb-4 col-span-2">Je hebt {score} punten behaald.</p>
                         <button onClick={handleReset} className="items-left justify-left px-4 py-2 mr-3">probeer opnieuw</button>
                         <Link href={"/"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
@@ -156,7 +156,7 @@ export default function kleding_boven() {
             {gameOver && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
                     <div className="grid-cols-2">
-                        <h2 className="text-white text-2xl mb-4 col-span-2">Tijd is op!</h2>
+                        <h2 className="text-white text-2xl mb-4 col-span-2">de andere waak is er!</h2>
                         <p className="text-white mb-4 col-span-2">Je hebt {score} punten behaald.</p>
                         <button onClick={handleReset} className="items-left justify-left px-4 py-2 mr-3">probeer opnieuw</button>
                         <Link href={"/"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
