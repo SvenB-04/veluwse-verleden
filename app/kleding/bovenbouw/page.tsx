@@ -1,44 +1,70 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link'
 import Image from "next/image";
 import KledingBovenKnoppen from "@/components/KledingBovenKnoppen";
 
 export default function kleding_boven() {
     const [score, setScore] = useState(0);
+    const [showIncorrectAlert, setShowIncorrectAlert] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(120);
+    const [gameOver, setGameOver] = useState(false);
     const imagetop = [
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
+        "/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/clothing character design.png",
+        "/Schermafbeelding_20221209_131843.png",
+        "/Schermafbeelding_20221209_131843.png",
+        "/Schermafbeelding_20221209_131843.png",
     ];
+
     const imagemiddle = [
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
+        "/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/clothing character design.png",
+        "/Schermafbeelding_20221209_131843.png",
+        "/clothing character design.png",
+        "/clothing character design.png",
     ];
     const imagebottom = [
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
-        "/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg",
+        "/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/clothing character design.png",
+        "/Schermafbeelding_20221209_131843.png",
+        "/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/8f3d7702ea124824ba92a0e1292d334d.png",
     ];
+    const exampleTop = "/Schermafbeelding_20221209_131843.png";
+    const exampleMiddle = "/clothing character design.png";
+    const exampleBottom = "/8f3d7702ea124824ba92a0e1292d334d.png";
     const [currenttop, setCurrenttop] = useState(imagetop[0]);
     const [currentmiddle, setCurrentmiddle] = useState(imagemiddle[0]);
     const [currentbottom, setCurrentbottom] = useState(imagebottom[0]);
     const handleReset = () => {
         window.location.reload();
     };
+
+    useEffect(() => {
+        if (timeLeft > 0 && !showIncorrectAlert) {
+            const timerId = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+            return () => clearTimeout(timerId);
+        } else if (timeLeft === 0) {
+            setGameOver(true);
+        }
+    }, [timeLeft, showIncorrectAlert]);
     function changeimage() {
-        const randomIndex = Math.floor(Math.random() * imagetop.length);
-        setCurrenttop(imagetop[randomIndex]);
-        setCurrentmiddle(imagemiddle[randomIndex]);
-        setCurrentbottom(imagebottom[randomIndex]);
+        const randomIndextop = Math.floor(Math.random() * imagetop.length);
+        const randomIndexmiddle = Math.floor(Math.random() * imagemiddle.length);
+        const randomIndexbottom = Math.floor(Math.random() * imagebottom.length);
+        setCurrenttop(imagetop[randomIndextop]);
+        setCurrentmiddle(imagemiddle[randomIndexmiddle]);
+        setCurrentbottom(imagebottom[randomIndexbottom]);
     }
     
     return(
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black dark:text-white grid grid-cols-3 gap-4">
             <div className="items-left justify-left">
                 <h1 className="text-2xl font-bold mb-4">Kleding Bovenbouw</h1>
+                <p className="mb-4">maak geen fouten voor 120 seconden en verzamel punten</p>
+                <p className="text-lg">Time left: {timeLeft} seconds</p>
             </div>
             <div className="items-center justify-center">
                 <Image
@@ -65,7 +91,7 @@ export default function kleding_boven() {
             </div>
             <div className="items-right justify-right">
                 <Image
-                    src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
+                    src={"/Schermafbeelding_20221209_131843.png"}
                     width={100}
                     height={100}
                     alt="bronze tijd hoofdwaar"
@@ -74,7 +100,7 @@ export default function kleding_boven() {
                     className="items-right justify-right"
                 />
                 <Image
-                    src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
+                    src={"/clothing character design.png"}
                     width={100}
                     height={100}
                     alt="bronze tijd borstwaar"
@@ -83,7 +109,7 @@ export default function kleding_boven() {
                     className="items-right justify-right"
                 />
                 <Image
-                    src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
+                    src={"/8f3d7702ea124824ba92a0e1292d334d.png"}
                     width={100}
                     height={100}
                     alt="bronze tijd beenwaar"
@@ -93,77 +119,46 @@ export default function kleding_boven() {
                 />
                 <KledingBovenKnoppen
                     laatIn={() => {
-                        if (document.getElementById("example_top")?.getAttribute("src") === document.getElementById("gast_top")?.getAttribute("src")) {
-                            if (document.getElementById("example_middle")?.getAttribute("src") === document.getElementById("gast_middle")?.getAttribute("src")) {
-                                if (document.getElementById("example_bottom")?.getAttribute("src") === document.getElementById("gast_bottom")?.getAttribute("src")) {
-                                    changeimage();
-                                    setScore(score + 1);
-                                }
-                                else{
-                                    <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                                        <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
-                                        <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                        <button onClick={handleReset}>probeer opnieuw</button>
-                                        <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
-                                    </div>
-                                }
-                            }
-                            else{
-                                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                                    <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
-                                    <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                    <button onClick={handleReset}>probeer opnieuw</button>
-                                    <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
-                                </div>
-                            }
+                        if (currenttop === exampleTop && currentmiddle === exampleMiddle && currentbottom === exampleBottom) {
+                            changeimage();
+                            setScore(score + 1);
                         }
                         else{
-                            <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                                <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
-                                <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                <button onClick={handleReset}>probeer opnieuw</button>
-                                <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
-                            </div>
+                            setShowIncorrectAlert(true);
                         }
                     }}
-                    
+
                     laatUit={() =>{
-                        if (document.getElementById("example_top")?.getAttribute("src") !== document.getElementById("gast_top")?.getAttribute("src")) {
-                            if (document.getElementById("example_middle")?.getAttribute("src") !== document.getElementById("gast_middle")?.getAttribute("src")) {
-                                if (document.getElementById("example_bottom")?.getAttribute("src") !== document.getElementById("gast_bottom")?.getAttribute("src")) {
-                                    changeimage();
-                                    setScore(score + 1);
-                                }
-                                else{
-                                    <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                                        <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
-                                        <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                        <button onClick={handleReset}>probeer opnieuw</button>
-                                        <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
-                                    </div>
-                                }
-                            }
-                            else{
-                                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                                    <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
-                                    <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                    <button onClick={handleReset}>probeer opnieuw</button>
-                                    <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
-                                </div>
-                            
-                            }
+                        if (currenttop !== exampleTop || currentmiddle !== exampleMiddle || currentbottom !== exampleBottom) {
+                            changeimage();
+                            setScore(score + 1);
                         }
                         else{
-                            <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                                <h2 className="text-white text-2xl mb-4">Helaas, dat is niet correct.</h2>
-                                <p className="text-white mb-4">Je hebt {score} punten behaald.</p>
-                                <button onClick={handleReset}>probeer opnieuw</button>
-                                <Link href={"/"}><button>kies een andere verhaallijn</button></Link>
-                            </div>
+                            setShowIncorrectAlert(true);
                         }
                     }}
                 />
             </div>
+            {showIncorrectAlert && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                    <div className="grid-cols-2">
+                        <h2 className="text-white text-2xl mb-4 col-span-2">Helaas, dat is niet correct. je hebt {timeLeft} seconden over.</h2>
+                        <p className="text-white mb-4 col-span-2">Je hebt {score} punten behaald.</p>
+                        <button onClick={handleReset} className="items-left justify-left px-4 py-2 mr-3">probeer opnieuw</button>
+                        <Link href={"/"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
+                    </div>
+                </div>
+            )}
+            {gameOver && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                    <div className="grid-cols-2">
+                        <h2 className="text-white text-2xl mb-4 col-span-2">Tijd is op!</h2>
+                        <p className="text-white mb-4 col-span-2">Je hebt {score} punten behaald.</p>
+                        <button onClick={handleReset} className="items-left justify-left px-4 py-2 mr-3">probeer opnieuw</button>
+                        <Link href={"/"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

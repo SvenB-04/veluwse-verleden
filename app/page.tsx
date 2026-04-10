@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from 'next/link'
 import Image from "next/image";
 import { useState } from "react";
 import ChoiceModal from "@/components/ChoiceModel";
@@ -17,7 +16,7 @@ export default function Home() {
                     className="px-4 py-2 rounded"
                 >
                     <Image
-                        src={"/veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"}
+                        src={"/kleur_MBRONS_ABV_def.jpeg"}
                         width={1000}
                         height={400}
                         alt="schoolplaat graafhuevels"
