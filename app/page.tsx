@@ -21,6 +21,7 @@ export default function Home() {
                         height={400}
                         alt="schoolplaat graafhuevels"
                         loading="eager"
+                        className="w-full"
                     />
                 </button>
                 <ChoiceModal

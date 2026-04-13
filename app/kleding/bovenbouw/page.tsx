@@ -5,13 +5,13 @@ import Link from 'next/link'
 import Image from "next/image";
 import KledingBovenKnoppen from "@/components/KledingBovenKnoppen";
 
-export default function kleding_boven() {
+export default function KledingBoven() {
     const [score, setScore] = useState(0);
     const [showIncorrectAlert, setShowIncorrectAlert] = useState(false);
     const [timeLeft, setTimeLeft] = useState(120);
     const [gameOver, setGameOver] = useState(false);
     const imagetop = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute een en voor de goede abeelding drie
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/clothing character design.png",
         "/Schermafbeelding_20221209_131843.png",
@@ -20,7 +20,7 @@ export default function kleding_boven() {
     ];
 
     const imagemiddle = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute een en voor de goede abeelding drie
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/clothing character design.png",
         "/Schermafbeelding_20221209_131843.png",
@@ -28,7 +28,7 @@ export default function kleding_boven() {
         "/clothing character design.png",
     ];
     const imagebottom = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute een en voor de goede abeelding drie
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
         "/8f3d7702ea124824ba92a0e1292d334d.png",
         "/clothing character design.png",
         "/Schermafbeelding_20221209_131843.png",
@@ -39,9 +39,9 @@ export default function kleding_boven() {
     const exampleTop = "/Schermafbeelding_20221209_131843.png";
     const exampleMiddle = "/clothing character design.png";
     const exampleBottom = "/8f3d7702ea124824ba92a0e1292d334d.png";
-    const [currenttop, setCurrenttop] = useState(imagetop[0]);
-    const [currentmiddle, setCurrentmiddle] = useState(imagemiddle[0]);
-    const [currentbottom, setCurrentbottom] = useState(imagebottom[0]);
+    const [currenttop, setCurrenttop] = useState(() => imagetop[Math.floor(Math.random() * imagetop.length)]);
+    const [currentmiddle, setCurrentmiddle] = useState(() => imagemiddle[Math.floor(Math.random() * imagemiddle.length)]);
+    const [currentbottom, setCurrentbottom] = useState(() => imagebottom[Math.floor(Math.random() * imagebottom.length)]);
     const handleReset = () => {
         window.location.reload();
     };
