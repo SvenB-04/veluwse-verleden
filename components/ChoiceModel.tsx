@@ -1,17 +1,17 @@
 "use client";
 
+import React from "react";
+
 type ChoiceModalProps = {
   isOpen: boolean;
   message: string;
-  onConfirm: () => void;
-  onCancel: () => void;
+  options: { content: React.ReactNode; onClick: () => void }[];
 };
 
 export default function ChoiceModal({
   isOpen,
   message,
-  onConfirm,
-  onCancel,
+  options,
 }: ChoiceModalProps) {
   if (!isOpen) return null;
 
@@ -20,24 +20,16 @@ export default function ChoiceModal({
       <div className="bg-white p-6 rounded-2xl shadow-xl w-96 text-center">
         <p className="mb-6 text-black">{message}</p>
 
-        <div className="flex justify-center gap-4">
-          <button
-            onClick={onCancel}
-            className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
-          >
-            <h3>onderbouw</h3><br></br>
-            <p>groep 3 t/m 5</p><br></br>
-            <p>leeftijd 6 t/m 9</p>
-          </button>
-
-          <button
-            onClick={onConfirm}
-            className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
-          >
-            <h3>bovenbouw</h3><br></br>
-            <p>groep 6 t/m 2e jaar</p><br></br>
-            <p>leeftijd 10 t/m 14</p>
-          </button>
+        <div className="flex justify-center gap-4 flex-wrap">
+          {options.map((option, index) => (
+            <button
+              key={index}
+              onClick={option.onClick}
+              className="px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
+            >
+              {option.content}
+            </button>
+          ))}
         </div>
       </div>
     </div>

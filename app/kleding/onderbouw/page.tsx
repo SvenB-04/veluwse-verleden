@@ -3,8 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useAFKHandler } from "@/hooks/useAFKHandler";
 
 export default function KledingOnder() {
+    useAFKHandler(60000); // 60 segundos sin actividad
     //zorg dat de teksten hieronder overeenkomen met de afbeeldingen die erbij horen, deze moeten ook nog worden toegevoegd. dus de tekst die op index 0 staat hoort bij de afbeelding die op index 0 staat en zo verder
     const informationtop = [
         "test1",
