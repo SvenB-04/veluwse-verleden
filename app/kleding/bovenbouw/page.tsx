@@ -77,6 +77,7 @@ export default function KledingBoven() {
                     height={200}
                     alt="clothing top"
                     id="gast_top"
+                    className="h-auto"
                 />
                 <Image
                     src={currentmiddle}
@@ -84,6 +85,7 @@ export default function KledingBoven() {
                     height={200}
                     alt="clothing middle"
                     id="gast_middle"
+                    className="h-auto"
                 />
                 <Image
                     src={currentbottom}
@@ -91,6 +93,7 @@ export default function KledingBoven() {
                     height={200}
                     alt="clothing bottom"
                     id="gast_bottom"
+                    className="h-auto"
                 />
             </div>
             <div className="items-right justify-right">
@@ -101,7 +104,7 @@ export default function KledingBoven() {
                     alt="bronze tijd hoofdwaar"
                     loading="eager"
                     id="example_top"
-                    className="items-right justify-right"
+                    className="items-right justify-right h-auto"
                 />
                 <Image
                     src={"/clothing character design.png"}
@@ -110,7 +113,7 @@ export default function KledingBoven() {
                     alt="bronze tijd borstwaar"
                     loading="eager"
                     id="example_middle"
-                    className="items-right justify-right"
+                    className="items-right justify-right h-auto"
                 />
                 <Image
                     src={"/8f3d7702ea124824ba92a0e1292d334d.png"}
@@ -119,7 +122,7 @@ export default function KledingBoven() {
                     alt="bronze tijd beenwaar"
                     loading="eager"
                     id = "example_bottom"
-                    className="items-right justify-right"
+                    className="items-right justify-right h-auto"
                 />
                 <KledingBovenKnoppen
                     laatIn={() => {

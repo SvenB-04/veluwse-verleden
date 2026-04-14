@@ -10,7 +10,7 @@ export default function Home() {
     const [open, setOpen] = useState(false);
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <div className="h-screen flex items-center justify-center">
+            <div className="h-screen flex items-center justify-center w-full">
                 <button
                     onClick={() => setOpen(true)}
                     className="px-4 py-2 rounded"
