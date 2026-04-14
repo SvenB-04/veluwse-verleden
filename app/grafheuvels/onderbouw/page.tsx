@@ -3,7 +3,7 @@
 import { useAFKHandler } from "@/hooks/useAFKHandler";
 
 export default function GrafheuvelsOnder() {
-    useAFKHandler(60000); // 60 segundos sin actividad
+    useAFKHandler(60000);
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <h1>Grafheuvels Onderbouw</h1>

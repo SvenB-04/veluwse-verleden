@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useAFKHandler } from "@/hooks/useAFKHandler";
 
 export default function KledingOnder() {
-    useAFKHandler(60000); // 60 segundos sin actividad
+    useAFKHandler(60000); 
     //zorg dat de teksten hieronder overeenkomen met de afbeeldingen die erbij horen, deze moeten ook nog worden toegevoegd. dus de tekst die op index 0 staat hoort bij de afbeelding die op index 0 staat en zo verder
     const informationtop = [
         "test1",

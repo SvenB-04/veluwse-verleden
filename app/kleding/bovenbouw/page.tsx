@@ -7,7 +7,7 @@ import KledingBovenKnoppen from "@/components/KledingBovenKnoppen";
 import { useAFKHandler } from "@/hooks/useAFKHandler";
 
 export default function KledingBoven() {
-    useAFKHandler(60000); // 60 segundos sin actividad
+    useAFKHandler(60000); 
     const [score, setScore] = useState(0);
     const [showIncorrectAlert, setShowIncorrectAlert] = useState(false);
     const [timeLeft, setTimeLeft] = useState(120);
