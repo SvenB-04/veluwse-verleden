@@ -13,6 +13,7 @@ export default function GrafheuvelsBoven() {
         Veeteelt
         Overbegrazing
         Te veel schapen → heide ontstaat.
+        te weinig schapen → bos ontstaat.
         Echte link met landschapsvorming
     </div>
   );
