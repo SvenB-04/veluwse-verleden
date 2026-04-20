@@ -25,22 +25,22 @@ export default function KledingOnder() {
     ];
     const imagetop = [
         //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/clothing character design.png",
-        "/Schermafbeelding_20221209_131843.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/clothing character design.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
     ];
 
     const imagemiddle = [
         //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/clothing character design.png",
-        "/Schermafbeelding_20221209_131843.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/clothing character design.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
     ];
     const imagebottom = [
         //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/clothing character design.png",
-        "/Schermafbeelding_20221209_131843.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/clothing character design.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
     ];
     const [topIndex, setTopIndex] = useState(() => Math.floor(Math.random() * imagetop.length));
     const [middleIndex, setMiddleIndex] = useState(() => Math.floor(Math.random() * imagemiddle.length));
@@ -75,31 +75,34 @@ export default function KledingOnder() {
             </div>
             <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black grid grid-rows-3 gap-4">
                 <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => schuifOmhoog('top')} className="items-left justify-left"><Image src={'/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
+                    <button onClick={() => schuifOmhoog('bottom')} className="items-left justify-left"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
                     <Image
-                        src={imagetop[topIndex]}
+                        src={imagebottom[bottomIndex]}
+                        style={{ width: 200, height: 200}}
                         width={200}
                         height={200}
-                        alt="clothing top"
+                        alt="clothing bottom"
                         className="justify-center items-center"
                     />
-                    <button onClick={() => schuifOmlaag('top')} className="items-right justify-right"><Image src={'/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
+                    <button onClick={() => schuifOmlaag('bottom')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => schuifOmhoog('middle')} className="items-left justify-left"><Image src={'/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
+                    <button onClick={() => schuifOmhoog('middle')} className="items-left justify-left"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
                     <Image
                         src={imagemiddle[middleIndex]}
+                        style={{ width: 200, height: 200 }}
                         width={200}
                         height={200}
                         alt="clothing middle"
                         className="justify-center items-center"
                     />
-                    <button onClick={() => schuifOmlaag('middle')} className="items-right justify-right"><Image src={'/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
+                    <button onClick={() => schuifOmlaag('middle')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
                     <button onClick={() => schuifOmhoog('bottom')} className="items-left justify-left"><Image src={'/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
                     <Image
                         src={imagebottom[bottomIndex]}
+                        style={{ width: 200, height: 200 }}
                         width={200}
                         height={200}
                         alt="clothing bottom"

@@ -14,33 +14,33 @@ export default function KledingBoven() {
     const [gameOver, setGameOver] = useState(false);
     const imagetop = [
         //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/clothing character design.png",
-        "/Schermafbeelding_20221209_131843.png",
-        "/Schermafbeelding_20221209_131843.png",
-        "/Schermafbeelding_20221209_131843.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/clothing character design.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
     ];
 
     const imagemiddle = [
         //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/clothing character design.png",
-        "/Schermafbeelding_20221209_131843.png",
-        "/clothing character design.png",
-        "/clothing character design.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/clothing character design.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
+        "/kleding/clothing character design.png",
+        "/kleding/clothing character design.png",
     ];
     const imagebottom = [
         //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/clothing character design.png",
-        "/Schermafbeelding_20221209_131843.png",
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/clothing character design.png",
+        "/kleding/Schermafbeelding_20221209_131843.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
     ];
     //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode
-    const exampleTop = "/Schermafbeelding_20221209_131843.png";
-    const exampleMiddle = "/clothing character design.png";
-    const exampleBottom = "/8f3d7702ea124824ba92a0e1292d334d.png";
+    const exampleTop = "/kleding/Schermafbeelding_20221209_131843.png";
+    const exampleMiddle = "/kleding/clothing character design.png";
+    const exampleBottom = "/kleding/8f3d7702ea124824ba92a0e1292d334d.png";
     const [currenttop, setCurrenttop] = useState(() => imagetop[Math.floor(Math.random() * imagetop.length)]);
     const [currentmiddle, setCurrentmiddle] = useState(() => imagemiddle[Math.floor(Math.random() * imagemiddle.length)]);
     const [currentbottom, setCurrentbottom] = useState(() => imagebottom[Math.floor(Math.random() * imagebottom.length)]);
@@ -75,24 +75,21 @@ export default function KledingBoven() {
             <div className="items-center justify-center">
                 <Image
                     src={currenttop}
-                    width={200}
-                    height={200}
+                    style={{ width: 200, height: 200 }}
                     alt="clothing top"
                     id="gast_top"
                     className="h-auto"
                 />
                 <Image
                     src={currentmiddle}
-                    width={200}
-                    height={200}
+                    style={{ width: 200, height: 200 }}
                     alt="clothing middle"
                     id="gast_middle"
                     className="h-auto"
                 />
                 <Image
                     src={currentbottom}
-                    width={200}
-                    height={200}
+                    style={{ width: 200, height: 200 }}
                     alt="clothing bottom"
                     id="gast_bottom"
                     className="h-auto"
@@ -100,27 +97,24 @@ export default function KledingBoven() {
             </div>
             <div className="items-right justify-right">
                 <Image
-                    src={"/Schermafbeelding_20221209_131843.png"}
-                    width={100}
-                    height={100}
+                    src={"/kleding/Schermafbeelding_20221209_131843.png"}
+                    style={{ width: 100, height: 100}}
                     alt="bronze tijd hoofdwaar"
                     loading="eager"
                     id="example_top"
                     className="items-right justify-right h-auto"
                 />
                 <Image
-                    src={"/clothing character design.png"}
-                    width={100}
-                    height={100}
+                    src={"/kleding/clothing character design.png"}
+                    style={{ width: 100, height: 100 }}
                     alt="bronze tijd borstwaar"
                     loading="eager"
                     id="example_middle"
                     className="items-right justify-right h-auto"
                 />
                 <Image
-                    src={"/8f3d7702ea124824ba92a0e1292d334d.png"}
-                    width={100}
-                    height={100}
+                    src={"/kleding/8f3d7702ea124824ba92a0e1292d334d.png"}
+                    style={{ width: 100, height: 100 }}
                     alt="bronze tijd beenwaar"
                     loading="eager"
                     id = "example_bottom"
