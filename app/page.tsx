@@ -17,7 +17,7 @@ export default function Home() {
         {
             title: "3. oog in oog met de Romeinen",
             url: "/3.oog-in-oog-met-de-romeinen",
-            image: "/public/romeinen.png"
+            image: "veluwse-verleden/public/ROM_ABV_KLEUR_DEF.jpg"
         },
         {
             title: "4. de ijzersterke middeleeuwen",
