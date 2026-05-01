@@ -45,7 +45,7 @@ const reflectieVragen = [
 ];
 
 export default function OmgaanMetDeDoodBoven() {
-  useAFKHandler(60000);
+  useAFKHandler(60000, "/2.grafheuvels");
   const router = useRouter();
   
   const [currentGraveIndex, setCurrentGraveIndex] = useState(0);

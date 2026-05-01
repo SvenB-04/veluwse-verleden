@@ -74,7 +74,7 @@ const evaluateRound = (sheepCount: number, hunting: Strategy) => {
 };
 
 export default function DierenBoven() {
-  useAFKHandler(60000);
+  useAFKHandler(60000, "/2.grafheuvels");
   const router = useRouter();
   const [year, setYear] = useState(1);
   const [sheepStrategy, setSheepStrategy] = useState<Strategy>("medium");

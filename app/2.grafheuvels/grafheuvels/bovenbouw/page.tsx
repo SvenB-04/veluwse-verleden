@@ -55,7 +55,7 @@ export default function GrafheuvelsBoven() {
   const [gameState, setGameState] = useState<'playing' | 'ended'>('playing');
   const [endReason, setEndReason] = useState<'time' | 'incorrect' | null>(null);
 
-  useAFKHandler(60000);
+  useAFKHandler(60000, "/2.grafheuvels");
 
   useEffect(() => {
     if (gameState !== 'playing') return;

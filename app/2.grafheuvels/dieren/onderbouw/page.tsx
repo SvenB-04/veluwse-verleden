@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function DierenOnder() {
-  useAFKHandler(60000); 
+  useAFKHandler(60000, "/2.grafheuvels"); 
   const router = useRouter();
   
   // State voor de dieren in elke zone

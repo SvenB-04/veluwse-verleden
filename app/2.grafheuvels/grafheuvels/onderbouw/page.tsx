@@ -17,7 +17,7 @@ function checkOrder(order: string[]): { isCorrect: boolean, errors: number } {
 }
 //graf graven via schep, doe doden en grafgifts in graf, gebruik hout voor palen, plag voor heuvel, bloemen voor versiering. juiste volgorde → animatie van voltooiing.
 export default function GrafheuvelsOnder() {
-    useAFKHandler(60000);
+    useAFKHandler(60000, "/2.grafheuvels");
     const [order, setOrder] = useState<string[]>([]);
     const [gameState, setGameState] = useState<'playing' | 'correct' | 'incorrect'>('playing');
     const router = useRouter();

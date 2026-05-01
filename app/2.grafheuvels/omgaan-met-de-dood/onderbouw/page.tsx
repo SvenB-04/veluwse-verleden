@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function OmgaanMetDeDoodOnder() {
-  useAFKHandler(60000);
+  useAFKHandler(60000, "/2.grafheuvels");
   const router = useRouter();
   
   // State voor geplaatste items op de grafheuvel

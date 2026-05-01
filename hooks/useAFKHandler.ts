@@ -1,7 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
-export const useAFKHandler = (inactivityTime: number = 60000) => {
+export const useAFKHandler = (
+  inactivityTime: number = 60000,
+  redirectPath: string = "/"
+) => {
   const router = useRouter();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -11,7 +14,7 @@ export const useAFKHandler = (inactivityTime: number = 60000) => {
     }
 
     timeoutRef.current = setTimeout(() => {
-      router.push("/");
+      router.push(redirectPath);
     }, inactivityTime);
   };
 
@@ -21,7 +24,6 @@ export const useAFKHandler = (inactivityTime: number = 60000) => {
     const handleActivity = () => {
       resetTimer();
     };
-
 
     window.addEventListener("click", handleActivity);
     window.addEventListener("mousemove", handleActivity);
@@ -38,5 +40,5 @@ export const useAFKHandler = (inactivityTime: number = 60000) => {
       window.removeEventListener("keydown", handleActivity);
       window.removeEventListener("touchstart", handleActivity);
     };
-  }, [inactivityTime, router]);
+  }, [inactivityTime, redirectPath, router]);
 };

@@ -7,7 +7,7 @@ import KledingBovenKnoppen from "@/components/KledingBovenKnoppen";
 import { useAFKHandler } from "@/hooks/useAFKHandler";
 
 export default function KledingBoven() {
-    useAFKHandler(60000); 
+    useAFKHandler(60000, "/2.grafheuvels"); 
     const [score, setScore] = useState(0);
     const [showIncorrectAlert, setShowIncorrectAlert] = useState(false);
     const [timeLeft, setTimeLeft] = useState(120);
