@@ -1,88 +1,79 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { useState } from "react";
-import ChoiceModal from "@/components/ChoiceModel";
 
 export default function Home() {
-    const router = useRouter();
-    const [open, setOpen] = useState(false);
-    const [currentOptions, setCurrentOptions] = useState<{ content: React.ReactNode; onClick: () => void }[]>([]);
-    const [currentMessage, setCurrentMessage] = useState("");
-
-    const kledingOptions: { content: React.ReactNode; onClick: () => void }[] = [
+    const images = [
         {
-            content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/kleding/onderbouw"); setOpen(false); }
+            title: "1. vorming van de landschap en de jagers en verzamelaars",
+            url: "/1.jagers-en-verzamelaars",
+            image: "/public/jagers.png"
         },
         {
-            content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/kleding/bovenbouw"); setOpen(false); }
+            title: "2. de eerste boeren en hun grafheuvelritueel",
+            url: "/2.grafheuvels",
+            image: "veluwse-verleden/public/kleur_MBRONS_ABV_def.jpeg"
+        },
+        {
+            title: "3. oog in oog met de Romeinen",
+            url: "/3.oog-in-oog-met-de-romeinen",
+            image: "/public/romeinen.png"
+        },
+        {
+            title: "4. de ijzersterke middeleeuwen",
+            url: "/4.de-ijzersterke-middeleeuwen",
+            image: "/public/middeleeuwen.png"
+        },
+        {
+            title: "5. hoe de mens in het landschap ingreep en het veluws natuurgebied ontstond",
+            url: "/5.hoe-de-mens-in-het-landschap-ingreep-en-het-veluws-natuurgebied-ontstond",
+            image: "/public/ontstond.png"
+        },
+        {
+            title: "6. beken, sprengen en watermolens in het veluws landschap",
+            url: "/6.beken-sprengen-en-watermolens-in-het-veluws-landschap",
+            image: "/public/watermolen.png"
+        },
+        {
+            title: "7. het argrarisch landschap van de veluwe",
+            url: "/7.het-agrarisch-landschap-van-de-veluwe",
+            image: "/public/agrarisch.png"
+        },
+        {
+            title: "8. oorlog, vrede en veiligheid op de veluwe",
+            url: "/8.oorlog-vrede-en-veiligheid-op-de-veluwe",
+            image: "/public/oorlog.png"
         }
     ];
 
-    const grafheuvelsOptions: { content: React.ReactNode; onClick: () => void }[] = [
-        {
-            content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/grafheuvels/onderbouw"); setOpen(false); }
-        },
-        {
-            content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/grafheuvels/bovenbouw"); setOpen(false); }
-        }
-    ];
-
-    const dierenOptions: { content: React.ReactNode; onClick: () => void }[] = [
-        {
-            content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/dieren/onderbouw"); setOpen(false); }
-        },
-        {
-            content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/dieren/bovenbouw"); setOpen(false); }
-        }
-    ];
-
-    const doodOptions: { content: React.ReactNode; onClick: () => void }[] = [
-        {
-            content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/omgaan-met-de-dood/onderbouw"); setOpen(false); }
-        },
-        {
-            content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/omgaan-met-de-dood/bovenbouw"); setOpen(false); }
-        }
-    ];
     return (
-        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <div className="h-screen flex items-center justify-center w-full gap-4" style={{ backgroundImage: `url('/kleur_MBRONS_ABV_def.jpeg')` }}>
-                <button
-                    onClick={() => { setCurrentOptions(kledingOptions); setCurrentMessage("Kies voor kleding: boven- of onderbouw?"); setOpen(true); }}
-                    className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                >
-                    Kleding
-                </button>
-                <button
-                    onClick={() => { setCurrentOptions(grafheuvelsOptions); setCurrentMessage("Kies voor grafheuvels: boven- of onderbouw?"); setOpen(true); }}
-                    className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                >
-                </button>
-                <button
-                    onClick={() => { setCurrentOptions(dierenOptions); setCurrentMessage("Kies voor dieren: boven- of onderbouw?"); setOpen(true); }}
-                    className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                >
-                </button>
-                <button
-                    onClick={() => { setCurrentOptions(doodOptions); setCurrentMessage("Kies voor omgaan met de dood: boven- of onderbouw?"); setOpen(true); }}
-                    className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                >
-                </button>
-                <ChoiceModal
-                    isOpen={open}
-                    message={currentMessage}
-                    options={currentOptions}
-                />
+        <div className="min-h-screen bg-zinc-50 dark:bg-black p-8">
+            <h1 className="text-4xl font-bold text-center mb-12 text-black dark:text-white">
+                Websites
+            </h1>
+            <div className="grid grid-cols-4 gap-6 max-w-7xl mx-auto">
+                {images.map((item, index) => (
+                    <a
+                        key={index}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                    >
+                        <div className="relative w-full h-48 bg-gray-200 dark:bg-gray-700">
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div className="p-4 bg-white dark:bg-gray-800">
+                            <h3 className="text-lg font-semibold text-black dark:text-white">
+                                {item.title}
+                            </h3>
+                        </div>
+                    </a>
+                ))}
             </div>
         </div>
     );
