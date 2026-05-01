@@ -1,0 +1,10 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" fill="#f0f0f0" stroke="#999" stroke-width="2"/>
+  <circle cx="50" cy="50" r="25" fill="#8B4513"/>
+  <circle cx="42" cy="40" r="4" fill="#000"/>
+  <line x1="35" y1="20" x2="30" y2="5" stroke="#8B4513" stroke-width="2"/>
+  <line x1="40" y1="20" x2="42" y2="3" stroke="#8B4513" stroke-width="2"/>
+  <line x1="65" y1="20" x2="70" y2="5" stroke="#8B4513" stroke-width="2"/>
+  <line x1="60" y1="20" x2="58" y2="3" stroke="#8B4513" stroke-width="2"/>
+  <text x="50" y="80" font-size="12" text-anchor="middle" font-family="Arial">Hert</text>
+</svg>

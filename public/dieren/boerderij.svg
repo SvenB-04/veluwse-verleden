@@ -1,0 +1,12 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#fff3e0" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="10" y="10" width="180" height="180" fill="none" stroke="#ffb74d" stroke-width="1"/>
+  <rect x="40" y="60" width="120" height="80" fill="#d7ccc8" stroke="#8d6e63" stroke-width="2"/>
+  <polygon points="100,60 60,30 140,30" fill="#c62828"/>
+  <rect x="55" y="90" width="30" height="50" fill="#81d4fa"/>
+  <rect x="115" y="90" width="30" height="50" fill="#81d4fa"/>
+  <circle cx="60" cy="130" r="8" fill="#795548"/>
+  <circle cx="90" cy="140" r="8" fill="#795548"/>
+  <circle cx="140" cy="135" r="8" fill="#795548"/>
+  <text x="100" y="165" font-size="20" text-anchor="middle" font-family="Arial" fill="#666">Boerderij</text>
+</svg>
