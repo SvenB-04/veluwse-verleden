@@ -185,7 +185,7 @@ export default function Home() {
                             onClick={() => { setCurrentOptions(zwaardOptions); setCurrentMessage("kies voor zwaard: boven- of onderbouw?"); setOpen(true); }}
                             className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
                         >
-                            zwaard
+                            🗡
                         </button>
                         <button
                             onClick={() => { setCurrentOptions(landschapOptions); setCurrentMessage("kies voor landschap: boven- of onderbouw?"); setOpen(true); }}
