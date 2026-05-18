@@ -108,7 +108,7 @@ export default function OmgaanMetDeDoodBoven() {
             Terug naar graven
           </button>
           <button
-            onClick={() => router.push('/')}
+            onClick={() => router.push('/2.grafheuvels')}
             className="px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors"
           >
             Terug naar home
@@ -205,7 +205,7 @@ export default function OmgaanMetDeDoodBoven() {
       
       {currentGraveIndex === graven.length - 1 && isGraveAnalyzed && (
         <button
-          onClick={() => router.push('/')}
+          onClick={() => router.push('/2.grafheuvels')}
           className="mt-6 px-6 py-3 bg-stone-600 text-white rounded-lg hover:bg-stone-500 transition-colors"
         >
           Terug naar home (zonder reflectie)

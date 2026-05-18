@@ -77,6 +77,7 @@ export default function DierenBoven() {
   useAFKHandler(60000, "/2.grafheuvels");
   const router = useRouter();
   const [year, setYear] = useState(1);
+  const [open, setOpen] = useState(false);
   const [sheepStrategy, setSheepStrategy] = useState<Strategy>("medium");
   const [huntingStrategy, setHuntingStrategy] = useState<Strategy>("medium");
   const [history, setHistory] = useState<HistoryItem[]>([]);
@@ -290,6 +291,7 @@ export default function DierenBoven() {
       </div>
       <ChoiceModal
         isOpen={modalOpen}
+        onClose={() => setOpen(false)}
         message={finalMessage}
         options={[
           {
@@ -301,7 +303,7 @@ export default function DierenBoven() {
           {
             content: "Terug naar start",
             onClick: () => {
-              router.push("/");
+              router.push("/2.grafheuvels");
             },
           },
         ]}

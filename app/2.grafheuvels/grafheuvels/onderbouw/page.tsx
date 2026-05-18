@@ -52,7 +52,7 @@ export default function GrafheuvelsOnder() {
     };
 
     const handleGoBack = () => {
-        router.push('/');
+        router.push('/2.grafheuvels');
     };
 
     if (gameState === 'correct') {

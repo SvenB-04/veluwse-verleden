@@ -91,7 +91,7 @@ export default function GrafheuvelsBoven() {
   };
 
   const handleGoBack = () => {
-    router.push('/');
+    router.push('/2.grafheuvels');
   };
 
   const removeLayer = (layerId: LayerKey) => {

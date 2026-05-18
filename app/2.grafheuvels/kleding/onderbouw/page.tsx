@@ -122,7 +122,7 @@ export default function KledingOnder() {
                 <div>
                     <p id="bottom_informatie"> {informationbottom[bottomIndex]} </p>
                 </div>
-                <Link href="/">
+                <Link href="/2.grafheuvels">
                     <button className="px-4 py-2 bg-blue-500 text-white rounded">Terug naar overzicht</button>
                 </Link>
             </div>

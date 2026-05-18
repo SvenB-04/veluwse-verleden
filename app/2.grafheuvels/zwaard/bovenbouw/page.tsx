@@ -126,6 +126,7 @@ export default function ZwaardBoven() {
                         <p>Vertrouwen: {resources.trust}</p>
                     </div>
                     <button onClick={resetGame} className="px-4 py-2 bg-gray-500 text-white rounded">Speel opnieuw</button>
+                    <button onClick={() => window.location.href = "/2.grafheuvels"} className="px-4 py-2 bg-gray-700 text-white rounded">Terug naar Grafheuvels</button>
                 </>
             )}
             {history.length > 0 && (

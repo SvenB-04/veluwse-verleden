@@ -148,7 +148,7 @@ export default function KledingBoven() {
                         <h2 className="text-white text-2xl mb-4 col-span-2">Helaas, dat is niet correct en je hebt iemand binnen gelaten die hier niet hoort. je hebt {timeLeft} seconden over.</h2>
                         <p className="text-white mb-4 col-span-2">Je hebt {score} punten behaald.</p>
                         <button onClick={handleReset} className="items-left justify-left px-4 py-2 mr-3">probeer opnieuw</button>
-                        <Link href={"/"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
+                        <Link href={"/2.grafheuvels"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
                     </div>
                 </div>
             )}
@@ -158,7 +158,7 @@ export default function KledingBoven() {
                         <h2 className="text-white text-2xl mb-4 col-span-2">de andere waak is er!</h2>
                         <p className="text-white mb-4 col-span-2">Je hebt {score} punten behaald.</p>
                         <button onClick={handleReset} className="items-left justify-left px-4 py-2 mr-3">probeer opnieuw</button>
-                        <Link href={"/"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
+                        <Link href={"/2.grafheuvels"}><button className="item-right justify-right px-4 py-2 ml-3">kies een andere verhaallijn</button></Link>
                     </div>
                 </div>
             )}
