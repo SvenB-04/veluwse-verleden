@@ -16,11 +16,11 @@ export default function Home() {
     const kledingOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/kleding/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/kleding/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/kleding/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/kleding/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -29,11 +29,11 @@ export default function Home() {
     const grafheuvelsOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/grafheuvels/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/grafheuvels/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/grafheuvels/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/grafheuvels/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -42,11 +42,11 @@ export default function Home() {
     const dierenOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/dieren/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/dieren/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/dieren/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/dieren/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -55,11 +55,11 @@ export default function Home() {
     const doodOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/omgaan-met-de-dood/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/omgaan-met-de-dood/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/omgaan-met-de-dood/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/omgaan-met-de-dood/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -68,11 +68,11 @@ export default function Home() {
     const ritueelOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/grafritueel/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/ritueel/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/grafritueel/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/ritueel/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -81,11 +81,11 @@ export default function Home() {
     const sieradenOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/sieraden/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/sieraden/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/sieraden/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/sieraden/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -94,11 +94,11 @@ export default function Home() {
     const stoomkuilenOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/stoomkuilen/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/stoomkuilen/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/stoomkuilen/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/stoomkuilen/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -107,11 +107,11 @@ export default function Home() {
     const klokbekerOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/klokbeker/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/klokbeker/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/klokbeker/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/klokbeker/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -120,11 +120,11 @@ export default function Home() {
     const zwaardOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/zwaard/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/zwaard/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/zwaard/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/zwaard/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -133,11 +133,11 @@ export default function Home() {
     const landschapOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
             content: <><h3>onderbouw</h3><br /><p>groep 3 t/m 5</p><br /><p>leeftijd 6 t/m 9</p></>,
-            onClick: () => { router.push("/landschap/onderbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/landschap/onderbouw"); setOpen(false); }
         },
         {
             content: <><h3>bovenbouw</h3><br /><p>groep 6 t/m 2e jaar</p><br /><p>leeftijd 10 t/m 14</p></>,
-            onClick: () => { router.push("/landschap/bovenbouw"); setOpen(false); }
+            onClick: () => { router.push("/2.grafheuvels/landschap/bovenbouw"); setOpen(false); }
         }
     ];
 
@@ -146,12 +146,18 @@ export default function Home() {
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
             <button
+                onClick={() => router.push("/")}
+                className="px-4 py-2 rounded bg-zinc-200 hover:bg-zinc-300 mb-4"
+            >
+                Terug naar home
+            </button>
+            <button
                 onClick={() => setButtonsVisible(!buttonsVisible)}
                 className="px-4 py-2 rounded bg-zinc-200 hover:bg-zinc-300 mb-4"
             >
                 {buttonsVisible ? "Maak de knoppen onzichtbaar" : "Maak de knoppen zichtbaar"}
             </button>
-            <div className="h-screen flex items-center justify-center w-full gap-4" style={{ backgroundImage: `url('/kleur_MBRONS_ABV_def.jpeg')` }}>
+            <div className="h-screen flex items-center justify-center w-full gap-4" style={{ backgroundImage: `url('/public/kleur_MBRONS_ABV_def.jpeg')` }}>
                 {buttonsVisible && (
                     <>
                         <button
@@ -218,6 +224,7 @@ export default function Home() {
                 )}
                 <ChoiceModal
                     isOpen={open}
+                    onClose={() => setOpen(false)}
                     message={currentMessage}
                     options={currentOptions}
                     info={currentInfo}
