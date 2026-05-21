@@ -49,7 +49,7 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-black p-8">
             <h1 className="text-4xl font-bold text-center mb-12 text-black dark:text-white">
-                Websites
+                Schoolplaten over de geschiedenis van de Veluwe
             </h1>
             <div className="grid grid-cols-4 gap-6 max-w-7xl mx-auto">
                 {images.map((item, index) => (
