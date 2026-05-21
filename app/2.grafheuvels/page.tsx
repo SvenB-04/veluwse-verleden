@@ -12,6 +12,23 @@ export default function Home() {
     const [currentMessage, setCurrentMessage] = useState("");
     const [currentInfo, setCurrentInfo] = useState<React.ReactNode>("");
     const [buttonsVisible, setButtonsVisible] = useState(true);
+    const [zoom, setZoom] = useState(1);
+
+    const minZoom = 0.8;
+    const maxZoom = 2.2;
+    const zoomStep = 0.1;
+
+    const handleZoomIn = () => setZoom((current) => Math.min(maxZoom, +(current + zoomStep).toFixed(2)));
+    const handleZoomOut = () => setZoom((current) => Math.max(minZoom, +(current - zoomStep).toFixed(2)));
+    const handleResetZoom = () => setZoom(1);
+    const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        if (event.deltaY < 0) {
+            handleZoomIn();
+        } else {
+            handleZoomOut();
+        }
+    };
 
     const kledingOptions: { content: React.ReactNode; onClick: () => void }[] = [
         {
@@ -157,78 +174,116 @@ export default function Home() {
             >
                 {buttonsVisible ? "Maak de knoppen onzichtbaar" : "Maak de knoppen zichtbaar"}
             </button>
-            <div className="h-screen flex items-center justify-center w-full gap-4" style={{ backgroundImage: `url('/public/kleur_MBRONS_ABV_def.jpeg')` }}>
-                {buttonsVisible && (
-                    <>
-                        <button
-                            onClick={() => { setCurrentOptions(kledingOptions); setCurrentMessage("Kies voor kleding: boven- of onderbouw?"); setCurrentInfo(kledingInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            Kleding
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(grafheuvelsOptions); setCurrentMessage("Kies voor grafheuvels: boven- of onderbouw?"); setCurrentInfo(grafheuvelsInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            grafheuvel
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(dierenOptions); setCurrentMessage("Kies voor dieren: boven- of onderbouw?"); setCurrentInfo(dierenInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            dieren
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(doodOptions); setCurrentMessage("Kies voor omgaan met de dood: boven- of onderbouw?"); setCurrentInfo(doodInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            omgaan met de dood
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(ritueelOptions); setCurrentMessage("kies voor grafritueel: boven- of onderbouw?"); setCurrentInfo(ritueelInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            grafritueel
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(sieradenOptions); setCurrentMessage("kies voor sieraden: boven- of onderbouw?"); setCurrentInfo(sieradenInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            sieraden
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(stoomkuilenOptions); setCurrentMessage("kies voor stoomkuilen: boven- of onderbouw"); setCurrentInfo(stoomkuilenInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            stoomkuilen
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(klokbekerOptions); setCurrentMessage("kies voor klokbeker: boven- of onderbouw?"); setCurrentInfo(klokbekerInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            klokbeker
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(zwaardOptions); setCurrentMessage("kies voor zwaard: boven- of onderbouw?"); setCurrentInfo(zwaardInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            🗡
-                        </button>
-                        <button
-                            onClick={() => { setCurrentOptions(landschapOptions); setCurrentMessage("kies voor landschap: boven- of onderbouw?"); setCurrentInfo(landschapInfo); setOpen(true); }}
-                            className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
-                        >
-                            landschap
-                        </button>
-                    </>
-                )}
-                <ChoiceModal
-                    isOpen={open}
-                    onClose={() => setOpen(false)}
-                    message={currentMessage}
-                    options={currentOptions}
-                    info={currentInfo}
+            <div className="relative h-screen w-full overflow-hidden" onWheel={handleWheel}>
+                <div
+                    className="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-200 ease-out"
+                    style={{
+                        backgroundImage: "url('/kleur_MBRONS_ABV_def.jpeg')",
+                        transform: `scale(${zoom})`,
+                        transformOrigin: "center center",
+                    }}
                 />
+
+                <div className="absolute top-4 left-4 flex flex-col gap-2">
+                    <div className="flex flex-wrap items-center gap-3 rounded-xl bg-zinc-950/30 p-4 text-white shadow-lg backdrop-blur-md">
+                        <button
+                            onClick={handleZoomOut}
+                            className="px-4 py-2 rounded bg-zinc-200 text-zinc-900 hover:bg-zinc-300"
+                        >
+                            −
+                        </button>
+                        <button
+                            onClick={handleResetZoom}
+                            className="px-4 py-2 rounded bg-zinc-200 text-zinc-900 hover:bg-zinc-300"
+                        >
+                            reset
+                        </button>
+                        <button
+                            onClick={handleZoomIn}
+                            className="px-4 py-2 rounded bg-zinc-200 text-zinc-900 hover:bg-zinc-300"
+                        >
+                            +
+                        </button>
+                        <span className="text-sm">Zoom: {Math.round(zoom * 100)}%</span>
+                    </div>
+                </div>
+
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-4 pointer-events-none">
+                    {buttonsVisible && (
+                        <div className="pointer-events-auto flex flex-wrap items-center justify-center gap-3">
+                            <button
+                                onClick={() => { setCurrentOptions(kledingOptions); setCurrentMessage("Kies voor kleding: boven- of onderbouw?"); setCurrentInfo(kledingInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                Kleding
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(grafheuvelsOptions); setCurrentMessage("Kies voor grafheuvels: boven- of onderbouw?"); setCurrentInfo(grafheuvelsInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                grafheuvel
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(dierenOptions); setCurrentMessage("Kies voor dieren: boven- of onderbouw?"); setCurrentInfo(dierenInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                dieren
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(doodOptions); setCurrentMessage("Kies voor omgaan met de dood: boven- of onderbouw?"); setCurrentInfo(doodInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                omgaan met de dood
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(ritueelOptions); setCurrentMessage("kies voor grafritueel: boven- of onderbouw?"); setCurrentInfo(ritueelInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                grafritueel
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(sieradenOptions); setCurrentMessage("kies voor sieraden: boven- of onderbouw?"); setCurrentInfo(sieradenInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                sieraden
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(stoomkuilenOptions); setCurrentMessage("kies voor stoomkuilen: boven- of onderbouw"); setCurrentInfo(stoomkuilenInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                stoomkuilen
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(klokbekerOptions); setCurrentMessage("kies voor klokbeker: boven- of onderbouw?"); setCurrentInfo(klokbekerInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                klokbeker
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(zwaardOptions); setCurrentMessage("kies voor zwaard: boven- of onderbouw?"); setCurrentInfo(zwaardInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                🗡
+                            </button>
+                            <button
+                                onClick={() => { setCurrentOptions(landschapOptions); setCurrentMessage("kies voor landschap: boven- of onderbouw?"); setCurrentInfo(landschapInfo); setOpen(true); }}
+                                className="px-4 py-2 rounded bg-zinc-200 bg-transparent-50 hover:bg-transparent-75"
+                            >
+                                landschap
+                            </button>
+                        </div>
+                    )}
+
+                    <div className="pointer-events-auto">
+                        <ChoiceModal
+                            isOpen={open}
+                            onClose={() => setOpen(false)}
+                            message={currentMessage}
+                            options={currentOptions}
+                            info={currentInfo}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );

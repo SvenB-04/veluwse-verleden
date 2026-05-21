@@ -141,7 +141,7 @@ export default function DierenOnder() {
             <div className="flex gap-4 justify-end">
               {modalContent.isCorrect ? (
                 <button
-                  onClick={() => router.push('/')}
+                  onClick={() => router.push('/2.grafheuvels')}
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
                 >
                   Terug naar hoofdpagina
