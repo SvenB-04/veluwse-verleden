@@ -343,6 +343,13 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <ChoiceModal
+                    isOpen={open}
+                    onClose={() => setOpen(false)}
+                    message={currentMessage}
+                    options={currentOptions}
+                    info={currentInfo}
+                />
             </div>
     );
 }
