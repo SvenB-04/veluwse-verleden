@@ -231,7 +231,7 @@ export default function Home() {
                                         setCurrentInfo(ritueelInfo);
                                         setOpen(true);
                                     }}
-                                    className="absolute top-[70%] left-[80%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
+                                    className="absolute top-[65%] left-[75%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
                                     🔥
                                 </button>

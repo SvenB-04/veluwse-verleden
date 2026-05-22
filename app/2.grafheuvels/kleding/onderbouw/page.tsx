@@ -99,7 +99,7 @@ export default function KledingOnder() {
                     <button onClick={() => schuifOmlaag('middle')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => schuifOmhoog('bottom')} className="items-left justify-left"><Image src={'/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
+                    <button onClick={() => schuifOmhoog('bottom')} className="items-left justify-left"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
                     <Image
                         src={imagebottom[bottomIndex]}
                         style={{ width: 200, height: 200 }}
@@ -109,7 +109,7 @@ export default function KledingOnder() {
                         className="justify-center items-center"
 
                     />
-                    <button onClick={() => schuifOmlaag('bottom')} className="items-right justify-right"><Image src={'/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
+                    <button onClick={() => schuifOmlaag('bottom')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
                 </div>
             </div>
             <div className="flex flex-col flex-1 items-right justify-right bg-zinc-50 font-sans dark:bg-black">
