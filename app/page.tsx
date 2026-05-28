@@ -7,7 +7,7 @@ export default function Home() {
         {
             title: "1. vorming van de landschap en de jagers en verzamelaars",
             url: "/1.jagers-en-verzamelaars",
-            image: "/kleur_MBRONS_ABV_def.jpeg"
+            image: "/Meso_kleur_def_V!.jpg"
         },
         {
             title: "2. de eerste boeren en hun grafheuvelritueel",
