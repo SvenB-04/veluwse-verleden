@@ -10,27 +10,12 @@ const relikwieën = [
   { name: "Sieraden", image: "/grafheuvels/sieraden.svg" },
 ];
 
-const layerKeys = ["z3", "z4", "z5", "z6"] as const;
-type LayerKey = (typeof layerKeys)[number];
-
-type LayerItems = Record<LayerKey, string | null>;
-type LayerState = Record<LayerKey, boolean>;
-
-function createLayerItems(): LayerItems {
-  const randomItem = () => {
-    const random = Math.random();
-    if (random < 0.5) {
-      return relikwieën[Math.floor(Math.random() * relikwieën.length)].name;
-    }
-    return null;
-  };
-
-  return {
-    z3: randomItem(),
-    z4: randomItem(),
-    z5: randomItem(),
-    z6: randomItem(),
-  };
+function createLayerItem(): string | null {
+  const random = Math.random();
+  if (random < 0.5) {
+    return relikwieën[Math.floor(Math.random() * relikwieën.length)].name;
+  }
+  return null;
 }
 
 function getItemImage(itemName: string | null) {
@@ -46,9 +31,9 @@ function determineCorrectStatus(foundItems: string[]) {
 
 export default function GrafheuvelsBoven() {
   const router = useRouter();
-  const [layerItems, setLayerItems] = useState<LayerItems>(createLayerItems);
-  const [shownItems, setShownItems] = useState<LayerState>({ z3: false, z4: false, z5: false, z6: false });
-  const [removedLayers, setRemovedLayers] = useState<LayerState>({ z3: false, z4: false, z5: false, z6: false });
+  const [layerItem, setLayerItem] = useState<string | null>(createLayerItem);
+  const [itemShown, setItemShown] = useState(false);
+  const [layerRemoved, setLayerRemoved] = useState(false);
   const [foundItems, setFoundItems] = useState<string[]>([]);
   const [score, setScore] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(120);
@@ -76,9 +61,9 @@ export default function GrafheuvelsBoven() {
   }, [gameState]);
 
   const resetLayerState = () => {
-    setLayerItems(createLayerItems());
-    setShownItems({ z3: false, z4: false, z5: false, z6: false });
-    setRemovedLayers({ z3: false, z4: false, z5: false, z6: false });
+    setLayerItem(createLayerItem());
+    setItemShown(false);
+    setLayerRemoved(false);
     setFoundItems([]);
   };
 
@@ -94,18 +79,17 @@ export default function GrafheuvelsBoven() {
     router.push('/2.grafheuvels');
   };
 
-  const removeLayer = (layerId: LayerKey) => {
-    if (gameState !== 'playing' || removedLayers[layerId]) return;
+  const removeLayer = () => {
+    if (gameState !== 'playing' || layerRemoved) return;
 
-    const item = layerItems[layerId];
-    if (item && !shownItems[layerId]) {
-      setShownItems((current) => ({ ...current, [layerId]: true }));
-      setFoundItems((current) => [...current, item]);
+    if (layerItem && !itemShown) {
+      setItemShown(true);
+      setFoundItems((current) => [...current, layerItem]);
       window.setTimeout(() => {
-        setRemovedLayers((current) => ({ ...current, [layerId]: true }));
+        setLayerRemoved(true);
       }, 2000);
     } else {
-      setRemovedLayers((current) => ({ ...current, [layerId]: true }));
+      setLayerRemoved(true);
     }
   };
 
@@ -150,25 +134,22 @@ export default function GrafheuvelsBoven() {
       <div className="relative" style={{ width: '400px', height: '400px' }}>
         <div style={{ backgroundImage: 'url("/grafheuvels/grond.svg")' }} className="absolute inset-0"></div>
         <div style={{ backgroundImage: 'url("/grafheuvels/hout.svg")' }} className="absolute inset-0"></div>
-        {layerKeys.map((layerId) => (
-          <div
-            key={layerId}
-            style={{
-              backgroundImage: 'url("/grafheuvels/steen.svg")',
-              display: removedLayers[layerId] ? 'none' : 'block',
-            }}
-            className="absolute inset-0"
-            onClick={() => removeLayer(layerId)}
-          >
-            {shownItems[layerId] && layerItems[layerId] && (
-              <img
-                src={getItemImage(layerItems[layerId]) || ''}
-                alt={layerItems[layerId] ?? ''}
-                style={{ width: '100px', height: '100px', margin: 'auto', display: 'block', position: 'relative', top: '140px' }}
-              />
-            )}
-          </div>
-        ))}
+        <div
+          style={{
+            backgroundImage: 'url("/grafheuvels/steen.svg")',
+            display: layerRemoved ? 'none' : 'block',
+          }}
+          className="absolute inset-0"
+          onClick={() => removeLayer()}
+        >
+          {itemShown && layerItem && (
+            <img
+              src={getItemImage(layerItem) || ''}
+              alt={layerItem ?? ''}
+              style={{ width: '100px', height: '100px', margin: 'auto', display: 'block', position: 'relative', top: '140px' }}
+            />
+          )}
+        </div>
         <div style={{ backgroundImage: 'url("/bloemen.png")' }} className="absolute inset-0"></div>
       </div>
 

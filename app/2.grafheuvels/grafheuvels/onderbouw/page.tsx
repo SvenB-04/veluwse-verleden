@@ -18,6 +18,25 @@ function checkOrder(order: string[]): { isCorrect: boolean, errors: number } {
 //graf graven via schep, doe doden en grafgifts in graf, gebruik hout voor palen, plag voor heuvel, bloemen voor versiering. juiste volgorde → animatie van voltooiing.
 export default function GrafheuvelsOnder() {
     useAFKHandler(60000, "/2.grafheuvels");
+    const initialItems = [
+        { id: 'graaf', image: '/grafheuvels/schep.svg' },
+        { id: 'doden', image: '/grafheuvels/doden.svg' },
+        { id: 'grafgifts', image: '/grafheuvels/grafgifts.svg' },
+        { id: 'zand', image: '/grafheuvels/zand.svg' },
+        { id: 'hout', image: '/grafheuvels/hout.svg' },
+        { id: 'bloemen', image: '/grafheuvels/bloemen.svg' },
+    ];
+
+    const shuffleArray = <T,>(array: T[]) => {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    };
+
+    const [items, setItems] = useState(() => shuffleArray(initialItems));
     const [order, setOrder] = useState<string[]>([]);
     const [gameState, setGameState] = useState<'playing' | 'correct' | 'incorrect'>('playing');
     const router = useRouter();
@@ -48,6 +67,7 @@ export default function GrafheuvelsOnder() {
 
     const handlePlayAgain = () => {
         setOrder([]);
+        setItems(shuffleArray(initialItems));
         setGameState('playing');
     };
 
@@ -97,15 +117,16 @@ export default function GrafheuvelsOnder() {
                 </div>
             </div>
             <div>
-                <div draggable="true" data-id="graaf" className="p-4 rounded mb-2 cursor-move" onDragStart={handleDragStart} style={{ backgroundImage: "url('/grafheuvels/schep.svg')", width: 100, height: 100 }}></div>
-                <div draggable="true" data-id="doden" className="p-4 rounded mb-2 cursor-move" onDragStart={handleDragStart} style={{ backgroundImage: "url('/grafheuvels/doden.svg')", width: 100, height: 100 }}></div>
-                <div draggable="true" data-id="grafgifts" className="p-4 rounded mb-2 cursor-move" onDragStart={handleDragStart} style={{ backgroundImage: "url('/grafheuvels/grafgifts.svg')", width: 100, height: 100 }}></div>
-                <div draggable="true" data-id="zand" className="p-4 rounded mb-2 cursor-move" onDragStart={handleDragStart} style={{ backgroundImage: "url('/grafheuvels/zand.svg')", width: 100, height: 100 }}>
-                </div>
-                <div draggable="true" data-id="hout" className="p-4 rounded mb-2 cursor-move" onDragStart={handleDragStart} style={{ backgroundImage: "url('/grafheuvels/hout.svg')", width: 100, height: 100 }}>
-                </div>
-                <div draggable="true" data-id="bloemen" className="p-4 rounded mb-2 cursor-move" onDragStart={handleDragStart} style={{ backgroundImage: "url('/grafheuvels/bloemen.svg')", width: 100, height: 100 }}>
-                </div>
+                {items.map((item) => (
+                    <div
+                        key={item.id}
+                        draggable="true"
+                        data-id={item.id}
+                        className="p-4 rounded mb-2 cursor-move"
+                        onDragStart={handleDragStart}
+                        style={{ backgroundImage: `url('${item.image}')`, width: 100, height: 100 }}
+                    ></div>
+                ))}
             </div>
             <button onClick={handleCheck} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Check Volgorde</button>
         </div>

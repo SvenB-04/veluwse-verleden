@@ -73,36 +73,44 @@ export default function DierenOnder() {
 
   //Sleep: Hert → wild Schaap → boerderij rund → boerderij wild zwijn → wild vos → wild
   return (
-    <div className="flex flex-col items-center justify-center h-screen grid-cols-4">
-      <div>
-        <h2>Dieren Onderbouw</h2>
-        <p>Welkom bij de dieren voor onderbouw.</p>
-        <p>Sleep de dieren naar de juiste plek: wild of boerderij.</p>
-      </div>
-      <div>
-        <Image src="/dieren/hert.svg" alt="Hert" data-transfer="hert" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-        <Image src="/dieren/schaap.svg" alt="Schaap" data-transfer="schaap" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-        <Image src="/dieren/rund.svg" alt="Rund" data-transfer="rund" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-        <Image src="/dieren/wildzwijn.svg" alt="Wild Zwijn" data-transfer="wildzwijn" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-        <Image src="/dieren/vos.svg" alt="Vos" data-transfer="vos" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-      </div>
-      <div className="flex gap-8">
-        <div className="text-center">
-          <h3>Wild</h3>
-          <Image src="/dieren/wild.svg" alt="wild" width={200} height={200} onDrop={handleDropWild} onDragOver={(e) => e.preventDefault()}/>
-          <div className="mt-2">
-            <p>Dieren hier: {wildAnimals.join(', ')}</p>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-6">
+      <div className="flex w-full max-w-6xl gap-8">
+        <div className="w-1/2 flex flex-col items-center gap-6">
+          <div className="text-center">
+            <h2>Dieren Onderbouw</h2>
+            <p>Welkom bij de dieren voor onderbouw.</p>
+            <p>Sleep de dieren naar de juiste plek: wild of boerderij.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Image src="/dieren/hert.svg" alt="Hert" data-transfer="hert" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/schaap.svg" alt="Schaap" data-transfer="schaap" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/rund.svg" alt="Rund" data-transfer="rund" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/wildzwijn.svg" alt="Wild Zwijn" data-transfer="wildzwijn" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/vos.svg" alt="Vos" data-transfer="vos" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
           </div>
         </div>
-        <div className="text-center">
-          <h3>Boerderij</h3>
-          <Image src="/dieren/boerderij.svg" alt="Boerderij" width={200} height={200} onDrop={handleDropBoerderij} onDragOver={(e) => e.preventDefault()}/>
-          <div className="mt-2">
-            <p>Dieren hier: {farmAnimals.join(', ')}</p>
+
+        <div className="w-1/2 flex flex-col items-center gap-8">
+          <div className="flex w-full gap-8">
+            <div className="flex-1 text-center">
+              <h3>Wild</h3>
+              <Image src="/dieren/wild.svg" alt="wild" width={200} height={200} onDrop={handleDropWild} onDragOver={(e) => e.preventDefault()}/>
+              <div className="mt-2">
+                <p>Dieren hier: {wildAnimals.join(', ')}</p>
+              </div>
+            </div>
+            <div className="flex-1 text-center">
+              <h3>Boerderij</h3>
+              <Image src="/dieren/boerderij.svg" alt="Boerderij" width={200} height={200} onDrop={handleDropBoerderij} onDragOver={(e) => e.preventDefault()}/>
+              <div className="mt-2">
+                <p>Dieren hier: {farmAnimals.join(', ')}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="mt-4">
+
+      <div className="mt-6 w-full max-w-6xl flex justify-center">
         <button 
           onClick={() => {
             const result = checkDierenPlaatsing();
@@ -124,7 +132,7 @@ export default function DierenOnder() {
             setModalContent({ isCorrect: result.isCorrect, message });
             setShowModal(true);
           }}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600"
         >
           Controleer antwoord
         </button>
