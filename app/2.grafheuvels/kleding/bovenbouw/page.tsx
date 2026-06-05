@@ -13,34 +13,34 @@ export default function KledingBoven() {
     const [timeLeft, setTimeLeft] = useState(120);
     const [gameOver, setGameOver] = useState(false);
     const imagetop = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/clothing character design.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
+        "/kleding/hoofd/Schermafbeelding 2026-06-05 113951.png",
+        "/kleding/hoofd/Schermafbeelding 2026-06-05 114545.png",
+        "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png",
+        "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png",
+        "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png",
     ];
 
     const imagemiddle = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/clothing character design.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
-        "/kleding/clothing character design.png",
-        "/kleding/clothing character design.png",
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
+        "/kleding/borst/Schermafbeelding 2026-06-05 114005.png",
+        "/kleding/borst/Schermafbeelding 2026-06-04 133105.png",
+        "/kleding/borst/Schermafbeelding 2026-06-05 114553.png",
+        "/kleding/borst/Schermafbeelding 2026-06-04 133105.png",
+        "/kleding/borst/Schermafbeelding 2026-06-04 133105.png",
     ];
     const imagebottom = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/clothing character design.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
+        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
+        "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
+        "/kleding/benen/Schermafbeelding 2026-06-05 114015.png",
+        "/kleding/benen/Schermafbeelding 2026-06-05 114608.png",
+        "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
+        "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
     ];
-    //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode
-    const exampleTop = "/kleding/Schermafbeelding_20221209_131843.png";
-    const exampleMiddle = "/kleding/clothing character design.png";
-    const exampleBottom = "/kleding/8f3d7702ea124824ba92a0e1292d334d.png";
+    //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode
+    const exampleTop = "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png";
+    const exampleMiddle = "/kleding/borst/Schermafbeelding 2026-06-04 133105.png";
+    const exampleBottom = "/kleding/benen/Schermafbeelding 2026-06-04 133115.png";
     const [currenttop, setCurrenttop] = useState(() => imagetop[Math.floor(Math.random() * imagetop.length)]);
     const [currentmiddle, setCurrentmiddle] = useState(() => imagemiddle[Math.floor(Math.random() * imagemiddle.length)]);
     const [currentbottom, setCurrentbottom] = useState(() => imagebottom[Math.floor(Math.random() * imagebottom.length)]);
@@ -97,7 +97,7 @@ export default function KledingBoven() {
             </div>
             <div className="items-right justify-right">
                 <Image
-                    src={"/kleding/Schermafbeelding_20221209_131843.png"}
+                    src={"/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png"}
                     style={{ width: 100, height: 100}}
                     alt="bronze tijd hoofdwaar"
                     loading="eager"
@@ -105,7 +105,7 @@ export default function KledingBoven() {
                     className="items-right justify-right h-auto"
                 />
                 <Image
-                    src={"/kleding/clothing character design.png"}
+                    src={"/kleding/borst/Schermafbeelding 2026-06-04 133105.png"}
                     style={{ width: 100, height: 100 }}
                     alt="bronze tijd borstwaar"
                     loading="eager"
@@ -113,7 +113,7 @@ export default function KledingBoven() {
                     className="items-right justify-right h-auto"
                 />
                 <Image
-                    src={"/kleding/8f3d7702ea124824ba92a0e1292d334d.png"}
+                    src={"/kleding/benen/Schermafbeelding 2026-06-04 133115.png"}
                     style={{ width: 100, height: 100 }}
                     alt="bronze tijd beenwaar"
                     loading="eager"
