@@ -24,23 +24,23 @@ export default function KledingOnder() {
         "test3",
     ];
     const imagetop = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/clothing character design.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
+        //de drie afbeeldingen hieronder zijn goed maar meer moeten worden toegevoegd, deze afbeeldingen moeten uit de andere schoolplaten komen
+        "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png",
+        "/kleding/hoofd/Schermafbeelding 2026-06-05 113951.png",
+        "/kleding/hoofd/Schermafbeelding 2026-06-05 114545.png",
     ];
 
     const imagemiddle = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/clothing character design.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
+        //de drie afbeeldingen hieronder zijn goed maar meer moeten worden toegevoegd, deze afbeeldingen moeten uit de andere schoolplaten komen
+        "/kleding/borst/Schermafbeelding 2026-06-04 133105.png",
+        "/kleding/borst/Schermafbeelding 2026-06-05 114005.png",
+        "/kleding/borst/Schermafbeelding 2026-06-05 114553.png",
     ];
     const imagebottom = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronperiode en andere tijdperken
-        "/kleding/8f3d7702ea124824ba92a0e1292d334d.png",
-        "/kleding/clothing character design.png",
-        "/kleding/Schermafbeelding_20221209_131843.png",
+        //de drie afbeeldingen hieronder zijn goed maar meer moeten worden toegevoegd, deze afbeeldingen moeten uit de andere schoolplaten komen
+        "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
+        "/kleding/benen/Schermafbeelding 2026-06-05 114015.png",
+        "/kleding/benen/Schermafbeelding 2026-06-05 114608.png",
     ];
     const [topIndex, setTopIndex] = useState(() => Math.floor(Math.random() * imagetop.length));
     const [middleIndex, setMiddleIndex] = useState(() => Math.floor(Math.random() * imagemiddle.length));

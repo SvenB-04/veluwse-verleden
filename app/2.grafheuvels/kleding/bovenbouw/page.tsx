@@ -13,7 +13,7 @@ export default function KledingBoven() {
     const [timeLeft, setTimeLeft] = useState(120);
     const [gameOver, setGameOver] = useState(false);
     const imagetop = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
+        //de drie afbeeldingen hieronder zijn goed maar meer moeten worden toegevoegd, deze afbeeldingen moeten uit de andere schoolplaten komen maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
         "/kleding/hoofd/Schermafbeelding 2026-06-05 113951.png",
         "/kleding/hoofd/Schermafbeelding 2026-06-05 114545.png",
         "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png",
@@ -22,7 +22,7 @@ export default function KledingBoven() {
     ];
 
     const imagemiddle = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
+        //de drie afbeeldingen hieronder zijn goed maar meer moeten worden toegevoegd, deze afbeeldingen moeten uit de andere schoolplaten komen maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
         "/kleding/borst/Schermafbeelding 2026-06-05 114005.png",
         "/kleding/borst/Schermafbeelding 2026-06-04 133105.png",
         "/kleding/borst/Schermafbeelding 2026-06-05 114553.png",
@@ -30,14 +30,13 @@ export default function KledingBoven() {
         "/kleding/borst/Schermafbeelding 2026-06-04 133105.png",
     ];
     const imagebottom = [
-        //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode en andere tijdperken maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
+        //de drie afbeeldingen hieronder zijn goed maar meer moeten worden toegevoegd, deze afbeeldingen moeten uit de andere schoolplaten komen maar wel opdeze manier neergezet met voor elke foute afbeelding een goede afbeelding plus een
         "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
         "/kleding/benen/Schermafbeelding 2026-06-05 114015.png",
         "/kleding/benen/Schermafbeelding 2026-06-05 114608.png",
         "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
         "/kleding/benen/Schermafbeelding 2026-06-04 133115.png",
     ];
-    //de drie afbeeldingen hieronder zijn placeholders, deze moeten vervangen worden door echte afbeeldingen van kledingstukken uit de bronzperiode
     const exampleTop = "/kleding/hoofd/Schermafbeelding 2026-06-04 133040.png";
     const exampleMiddle = "/kleding/borst/Schermafbeelding 2026-06-04 133105.png";
     const exampleBottom = "/kleding/benen/Schermafbeelding 2026-06-04 133115.png";
