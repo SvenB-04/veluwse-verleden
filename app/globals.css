@@ -99,3 +99,18 @@ a:hover {
   background: rgba(201, 145, 33, 0.25);
   color: var(--foreground);
 }
+
+/* Emoji styling for better visibility across browsers */
+button {
+  font-variant-emoji: emoji;
+  -webkit-text-stroke: 0.5px transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure emoji in buttons display with proper line-height */
+button,
+button span {
+  line-height: 1.2;
+}

@@ -221,7 +221,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[40%] left-[70%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    🪦
+                                    🪦️
                                 </button>
 
                                 <button
@@ -233,7 +233,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[65%] left-[75%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    🔥
+                                    🔥️
                                 </button>
 
                                 <button
@@ -245,7 +245,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[60%] left-[30%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    👕
+                                    👕️
                                 </button>
 
                                 <button
@@ -257,7 +257,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[45%] left-[20%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    💍
+                                    💍️
                                 </button>
 
                                 <button
@@ -269,7 +269,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[45%] left-[35%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    ♨️
+                                    ♨️️
                                 </button>
 
                                 <button
@@ -281,7 +281,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[20%] left-[30%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    🏺
+                                    🏺️
                                 </button>
 
                                 <button
@@ -291,9 +291,9 @@ export default function Home() {
                                         setCurrentInfo(zwaardInfo);
                                         setOpen(true);
                                     }}
-                                    className="absolute top-[75%] left-[15%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
+                                    className="absolute top-[73%] left-[10%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    🗡️
+                                    🗡️️
                                 </button>
 
                                 <button
@@ -305,7 +305,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[8%] left-[45%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    🌳
+                                    🌳️
                                 </button>
 
                                 <button
@@ -317,7 +317,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[85%] left-[50%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    🐄
+                                    🐄️
                                 </button>
 
                                 <button
@@ -329,7 +329,7 @@ export default function Home() {
                                     }}
                                     className="absolute top-[25%] left-[70%] text-3xl hover:scale-110 transition cursor-pointer px-4 py-3 rounded-full bg-white/90 shadow-lg border border-white/70 opacity-70"
                                 >
-                                    ⚰️
+                                    ⚰️️
                                 </button>
                             </>
                         )}

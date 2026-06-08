@@ -12,7 +12,8 @@ const relikwieën = [
 
 function createLayerItem(): string | null {
   const random = Math.random();
-  if (random < 0.5) {
+  // verhoogde kans om een voorwerp te vinden (80%)
+  if (random < 0.8) {
     return relikwieën[Math.floor(Math.random() * relikwieën.length)].name;
   }
   return null;
@@ -141,15 +142,18 @@ export default function GrafheuvelsBoven() {
           }}
           className="absolute inset-0"
           onClick={() => removeLayer()}
-        >
-          {itemShown && layerItem && (
+        />
+
+        {/* Toon het gevonden voorwerp duidelijk bovenop, ook nadat de laag is verwijderd */}
+        {itemShown && layerItem && (
+          <div className="absolute" style={{ left: '50%', top: '55%', transform: 'translate(-50%, -50%)', zIndex: 30 }}>
             <img
               src={getItemImage(layerItem) || ''}
               alt={layerItem ?? ''}
-              style={{ width: '100px', height: '100px', margin: 'auto', display: 'block', position: 'relative', top: '140px' }}
+              style={{ width: '140px', height: '140px', display: 'block' }}
             />
-          )}
-        </div>
+          </div>
+        )}
         <div style={{ backgroundImage: 'url("/bloemen.png")' }} className="absolute inset-0"></div>
       </div>
 

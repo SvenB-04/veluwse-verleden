@@ -67,52 +67,51 @@ export default function KledingOnder() {
     };
 
     return (
-        <div className="grid grid-cols-3 gap-4">
-            <div className="flex flex-col flex-1 items-left justify-left bg-zinc-50 font-sans dark:bg-black">
+        <div className="mx-auto max-w-6xl px-4 py-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="flex flex-col flex-1 items-start justify-start bg-zinc-50 font-sans dark:bg-black p-4 rounded-lg">
                 <h1 className="text-2xl font-bold mb-4">Kleding Onderbouw</h1>
                 <p className="mb-4"></p>
                 <p className="text-lg"></p>
             </div>
-            <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black grid grid-rows-3 gap-4">
-                <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => schuifOmhoog('bottom')} className="items-left justify-left"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
+            <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black gap-4 p-4 rounded-lg">
+                <div className="grid grid-cols-3 gap-2 w-full items-center">
+                    <button onClick={() => schuifOmhoog('top')} className="flex items-center justify-center"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="h-auto"/></button>
                     <Image
-                        src={imagebottom[bottomIndex]}
+                        src={imagetop[topIndex]}
                         style={{ width: 200, height: 200}}
                         width={200}
                         height={200}
-                        alt="clothing bottom"
-                        className="justify-center items-center"
+                        alt="clothing top"
+                        className="mx-auto"
                     />
-                    <button onClick={() => schuifOmlaag('bottom')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
+                    <button onClick={() => schuifOmlaag('top')} className="flex items-center justify-center"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="h-auto"/></button>
                 </div>
-                <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => schuifOmhoog('middle')} className="items-left justify-left"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
+                <div className="grid grid-cols-3 gap-2 w-full items-center">
+                    <button onClick={() => schuifOmhoog('middle')} className="flex items-center justify-center"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="h-auto"/></button>
                     <Image
                         src={imagemiddle[middleIndex]}
                         style={{ width: 200, height: 200 }}
                         width={200}
                         height={200}
                         alt="clothing middle"
-                        className="justify-center items-center"
+                        className="mx-auto"
                     />
-                    <button onClick={() => schuifOmlaag('middle')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
+                    <button onClick={() => schuifOmlaag('middle')} className="flex items-center justify-center"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="h-auto"/></button>
                 </div>
-                <div className="grid grid-cols-3 gap-2">
-                    <button onClick={() => schuifOmhoog('bottom')} className="items-left justify-left"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="justify-left items-left"/></button>
+                <div className="grid grid-cols-3 gap-2 w-full items-center">
+                    <button onClick={() => schuifOmhoog('bottom')} className="flex items-center justify-center"><Image src={'/ui/pijl_naar_links.png'} width={50} height={50} alt="pijl naar links" className="h-auto"/></button>
                     <Image
                         src={imagebottom[bottomIndex]}
                         style={{ width: 200, height: 200 }}
                         width={200}
                         height={200}
                         alt="clothing bottom"
-                        className="justify-center items-center"
-
+                        className="mx-auto"
                     />
-                    <button onClick={() => schuifOmlaag('bottom')} className="items-right justify-right"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="items-right justify-right"/></button>
+                    <button onClick={() => schuifOmlaag('bottom')} className="flex items-center justify-center"><Image src={'/ui/pijl_naar_rechts.png'} width={50} height={50} alt="pijl naar rechts" className="h-auto"/></button>
                 </div>
             </div>
-            <div className="flex flex-col flex-1 items-right justify-right bg-zinc-50 font-sans dark:bg-black">
+            <div className="flex flex-col flex-1 items-end justify-end bg-zinc-50 font-sans dark:bg-black p-4 rounded-lg text-right">
                 <div>
                     <p id="top_informatie"> {informationtop[topIndex]} </p>
                 </div>

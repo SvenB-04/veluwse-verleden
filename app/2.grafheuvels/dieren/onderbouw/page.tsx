@@ -82,11 +82,11 @@ export default function DierenOnder() {
             <p>Sleep de dieren naar de juiste plek: wild of boerderij.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <Image src="/dieren/ChatGPT Image 4 jun 2026, 11_38_15.png" alt="Hert" data-transfer="hert" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-            <Image src="/dieren/Schermafbeelding 2026-06-01 144244.png" alt="Schaap" data-transfer="schaap" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-            <Image src="/dieren/ChatGPT Image 4 jun 2026, 11_44_45.png" alt="Rund" data-transfer="rund" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-            <Image src="/dieren/ChatGPT Image 4 jun 2026, 11_55_31.png" alt="Wild Zwijn" data-transfer="wildzwijn" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
-            <Image src="/dieren/Schermafbeelding 2026-06-01 142040.png" alt="Vos" data-transfer="vos" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/hert.png" alt="Hert" data-transfer="hert" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/schaap.png" alt="Schaap" data-transfer="schaap" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/rund.png" alt="Rund" data-transfer="rund" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/wildzwijn.png" alt="Wild Zwijn" data-transfer="wildzwijn" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
+            <Image src="/dieren/vos.png" alt="Vos" data-transfer="vos" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
           </div>
         </div>
 

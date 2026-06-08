@@ -116,13 +116,13 @@ export default function GrafheuvelsOnder() {
                     <p>Huidige volgorde: {order.join(', ')}</p>
                 </div>
             </div>
-            <div>
+            <div className="flex flex-wrap gap-2 justify-center">
                 {items.map((item) => (
                     <div
                         key={item.id}
                         draggable="true"
                         data-id={item.id}
-                        className="p-4 rounded mb-2 cursor-move"
+                        className="p-4 rounded cursor-move"
                         onDragStart={handleDragStart}
                         style={{ backgroundImage: `url('${item.image}')`, width: 100, height: 100 }}
                     ></div>
