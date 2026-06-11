@@ -156,6 +156,14 @@ export default function DierenBoven() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="rounded-3xl bg-white p-8 shadow-xl">
           <h1 className="text-4xl font-bold mb-3">Dieren Bovenbouw</h1>
+          <div className="bg-green-200 border-2 border-green-700 rounded-lg p-6 mb-6">
+            <h2 className="text-xl font-bold text-green-900 mb-3">🎮 Hoe speel je dit spel?</h2>
+            <p className="text-green-900 mb-2"><strong>Doel:</strong> Ontdek hoe schapenfokkerij en jacht het landschap veranderen</p>
+            <p className="text-green-900 mb-2"><strong>Per ronde:</strong> Kies hoeveel schapen je teelt en hoe intensief je jaagt</p>
+            <p className="text-green-900 mb-2"><strong>Gevolgen:</strong> Dit bepaalt of je landschap bos, grasland of heide wordt</p>
+            <p className="text-green-900 mb-2"><strong>Wat je leert:</strong> Hoe menselijke activiteiten het Veluws natuurgebied vormden</p>
+            <p className="text-green-900 text-sm mt-2">💡 <em>Tip: Balans is belangrijk! Te veel schapen = heide. Te weinig = terugkeer van het bos!</em></p>
+          </div>
           <p className="text-lg leading-8 text-slate-700 mb-6">
             Beheer jacht, veeteelt en laat zien hoe overbegrazing of balans het landschap beïnvloedt.
             Te veel schapen geeft heide, te weinig schapen geeft bos en balans geeft grasland en dorpsgroei.

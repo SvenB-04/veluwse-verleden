@@ -92,11 +92,26 @@ export default function ZwaardBoven() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen gap-8 p-4">
             <h1 className="text-3xl font-bold">Het Zwaard van Keuzes</h1>
+            {!gameOver && (
+                <div className="bg-yellow-100 border-2 border-yellow-600 rounded-lg p-6 max-w-2xl">
+                    <h2 className="text-xl font-bold text-yellow-800 mb-3">🎮 Hoe speel je dit spel?</h2>
+                    <p className="text-yellow-900 mb-2"><strong>Doel:</strong> Beheer je bronstijddorp gedurende 3 rondes</p>
+                    <p className="text-yellow-900 mb-2"><strong>Je middelen:</strong> Voedsel, Mensen, Brons en Vertrouwen</p>
+                    <p className="text-yellow-900 mb-2"><strong>Per ronde:</strong> Kies samen één strategie:</p>
+                    <ul className="text-yellow-900 mb-2 ml-4">
+                        <li>⚔️ <strong>Oorlog</strong> → Meer brons, minder mensen</li>
+                        <li>🙏 <strong>Offer</strong> → Meer vertrouwen, minder mensen</li>
+                        <li>🤝 <strong>Diplomatie</strong> → Meer handel en allerlei voordelen</li>
+                        <li>👑 <strong>Status</strong> → Meer vertrouwen, minder brons</li>
+                    </ul>
+                    <p className="text-yellow-900 text-sm">💡 <em>Tip: Zorg dat je volk niet uitsterft! Balanceer je middelen goed!</em></p>
+                </div>
+            )}
             {!gameOver ? (
                 <>
-                    <p className="text-lg text-center max-w-md">
+                    <div className="text-lg text-center max-w-md">
                         Het zwaard ligt in het midden. Jullie hebben beperkte middelen: voedsel, mensen, brons en vertrouwen. Stem of kies samen wat jullie doen.
-                    </p>
+                    </div>
                     <div className="text-center">
                         <p>Ronde: {round}/3</p>
                         <p>Voedsel: {resources.food}</p>

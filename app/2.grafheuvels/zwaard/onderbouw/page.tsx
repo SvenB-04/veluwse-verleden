@@ -104,6 +104,17 @@ export default function ZwaardOnder() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen gap-8 p-8 bg-gradient-to-b from-amber-50 to-orange-100">
             <h1 className="text-4xl font-bold text-amber-900">Het Zwaard van Brons</h1>
+            
+            {currentStep === 1 && (
+                <div className="bg-blue-100 border-2 border-blue-500 rounded-lg p-6 max-w-2xl">
+                    <h2 className="text-xl font-bold text-blue-800 mb-3">🎮 Hoe speel je dit spel?</h2>
+                    <p className="text-blue-900 mb-2"><strong>Stap 1:</strong> Verzamel alle drie materialen (Koper, Tin en Hout)</p>
+                    <p className="text-blue-900 mb-2"><strong>Stap 2:</strong> Stel de juiste verhouding in</p>
+                    <p className="text-blue-900 mb-2"><strong>Stap 3:</strong> Giet het vloeibare brons in de zwaardvorm</p>
+                    <p className="text-blue-900"><strong>Stap 4:</strong> Versier je zwaard met een mooi patroon</p>
+                    <p className="text-blue-900 mt-3 text-sm">💡 <em>Tip: Brons is een mengsel van koper en tin. De juiste verhouding is belangrijk!</em></p>
+                </div>
+            )}
 
             {/* Stap 1: Verzamel materialen */}
             {currentStep === 1 && (
@@ -142,7 +153,7 @@ export default function ZwaardOnder() {
             {currentStep === 2 && (
                 <div className="flex flex-col items-center gap-6 bg-white p-8 rounded-lg shadow-lg max-w-2xl">
                     <h2 className="text-2xl font-semibold">Stap 2: Smelten in de Oven</h2>
-                    <p className="text-center">Kies de juiste verhouding: 2 delen koper en 1 deel tin</p>
+                    <p className="text-center">Kies de juiste verhouding</p>
 
                     <div className="flex gap-8">
                         <div className="bg-orange-100 p-6 rounded-lg border-2 border-orange-500">

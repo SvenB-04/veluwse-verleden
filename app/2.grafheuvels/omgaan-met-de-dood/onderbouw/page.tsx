@@ -66,7 +66,14 @@ export default function OmgaanMetDeDoodOnder() {
       `}</style>
       
       <h1 className="text-4xl font-bold text-white mb-8">Omgaan met de dood - Onderbouw</h1>
-      <p className="text-white mb-12 text-lg">Sleep de bloem en pot naar de grafheuvel als teken van respect en liefde</p>
+      <div className="bg-amber-800 border-2 border-amber-400 rounded-lg p-6 max-w-2xl mb-8">
+        <h2 className="text-xl font-bold text-amber-100 mb-3">🎮 Hoe speel je dit spel?</h2>
+        <p className="text-amber-100 mb-2"><strong>Doel:</strong> Plaats bloemen en een pot op de grafheuvel als teken van respect en liefde</p>
+        <p className="text-amber-100 mb-2"><strong>Hoe:</strong> Sleep de bloem en de pot beide naar de grafheuvel</p>
+        <p className="text-amber-100"><strong>Wat gebeurt er:</strong> Zodra je allebei de items hebt geplaatst, zal de grafheuvel mooi oplichten!</p>
+        <p className="text-amber-100 text-sm mt-2">💡 <em>Dit spel gaat over hoe we onze doden eren en herinneren.</em></p>
+      </div>
+      <p className="text-white text-lg">Sleep de bloem en pot naar de grafheuvel als teken van respect en liefde</p>
       
       {/* Items om te slepen */}
       <div className="flex gap-12 mb-12">

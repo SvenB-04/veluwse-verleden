@@ -125,7 +125,15 @@ export default function GrafheuvelsBoven() {
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-6">
       <div className="text-center">
-        <h1>Grafheuvels Bovenbouw</h1>
+        <h1 className="text-3xl font-bold mb-4">Grafheuvels Bovenbouw</h1>
+        <div className="bg-amber-800 border-2 border-amber-400 rounded-lg p-6 max-w-2xl mb-6">
+          <h2 className="text-xl font-bold text-amber-100 mb-3">🎮 Hoe speel je dit spel?</h2>
+          <p className="text-amber-100 mb-2"><strong>Doel:</strong> Graaf voorzichtig en bepaal wie in de grafheuvel begraven was</p>
+          <p className="text-amber-100 mb-2"><strong>Hoe:</strong> Verwijder stap voor stap de lagen en verzamel voorwerpen</p>
+          <p className="text-amber-100 mb-2"><strong>Wat je vindt:</strong> Bronzen dolk (strijder), Sieraden/Klokbeker (belangrijk persoon), of niets (gewone persoon)</p>
+          <p className="text-amber-100"><strong>Raad:</strong> Bepaal op basis van de voorwerpen wat voor persoon hier begraven was</p>
+          <p className="text-amber-100 text-sm mt-2">⏱️ <em>Je hebt 2 minuten! Werk snel en nauwkeurig!</em></p>
+        </div>
         <p>Welkom bij de grafheuvels voor bovenbouw.</p>
         <p>Score: {score}</p>
         <p>Tijd over: {secondsLeft}s</p>

@@ -70,6 +70,12 @@ export default function KledingOnder() {
         <div className="mx-auto max-w-6xl px-4 py-6 grid grid-cols-1 gap-4 md:grid-cols-3">
             <div className="flex flex-col flex-1 items-start justify-start bg-zinc-50 font-sans dark:bg-black p-4 rounded-lg">
                 <h1 className="text-2xl font-bold mb-4">Kleding Onderbouw</h1>
+                <div className="bg-blue-100 border-2 border-blue-500 rounded-lg p-4 mb-4 w-full">
+                    <h2 className="text-lg font-bold text-blue-800 mb-2">🎮 Hoe speel je dit spel?</h2>
+                    <p className="text-blue-900 mb-2"><strong>Doel:</strong> Ontdek verschillende stijlen van bronzijdse kleding</p>
+                    <p className="text-blue-900"><strong>Hoe:</strong> Klik op de pijlen om door verschillende kledingstukken te bladeren voor hoofd, borst en benen</p>
+                    <p className="text-blue-900 text-sm mt-2">💡 <em>Tip: Je kunt onafhankelijk door elk lichaamsdeel bladeren en je eigen combinatie samenstellen!</em></p>
+                </div>
                 <p className="mb-4"></p>
                 <p className="text-lg"></p>
             </div>

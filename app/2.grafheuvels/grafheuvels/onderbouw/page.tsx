@@ -101,15 +101,22 @@ export default function GrafheuvelsOnder() {
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <div className="flex flex-col items-center justify-center h-screen">
-                <h1>Grafheuvels Onderbouw</h1>
+                <h1 className="text-3xl font-bold mb-6">Grafheuvels Onderbouw</h1>
+                <div className="bg-purple-100 border-2 border-purple-600 rounded-lg p-6 max-w-2xl mb-6">
+                  <h2 className="text-xl font-bold text-purple-800 mb-3">🎮 Hoe speel je dit spel?</h2>
+                  <p className="text-purple-900 mb-2"><strong>Doel:</strong> Bouw een grafheuvel door items in de juiste volgorde te plaatsen</p>
+                  <p className="text-purple-900 mb-2"><strong>Juiste volgorde:</strong></p>
+                  <ol className="text-purple-900 mb-2 ml-4 list-decimal">
+                    <li>Graaf het graf (schep)</li>
+                    <li>Plaats de doden</li>
+                    <li>Voeg grafgifts toe</li>
+                    <li>Zet houten palen neer</li>
+                    <li>Dek af met zand</li>
+                    <li>Versier met bloemen</li>
+                  </ol>
+                  <p className="text-purple-900 text-sm mt-2">💡 <em>Tip: Think logically about the steps of building a burial mound!</em></p>
+                </div>
                 <p>Welkom bij Bouw je eigen Grafheuvel.</p>
-                <li>gameplay</li>
-                <ul>
-                    <li>Sleep zand, stenen, hout en bloemen naar de juiste plek</li>
-                    <li>Bouw stap voor stap een grafheuvel</li>
-                    <li>Als alles goed ligt → animatie van voltooiing 🎉</li>
-                </ul>
-            </div>
             <div className="mt-8">
                 <div className="mb-4" onDragOver={e => e.preventDefault()} onDrop={handleDrop}>
                     <h2>Grafheuvel Bouwplaats</h2>

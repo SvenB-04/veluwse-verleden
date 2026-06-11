@@ -121,6 +121,14 @@ export default function OmgaanMetDeDoodBoven() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-stone-900 p-8">
       <h1 className="text-4xl font-bold text-white mb-4">Omgaan met de dood - Bovenbouw</h1>
+      <div className="bg-amber-800 border-2 border-amber-400 rounded-lg p-6 max-w-2xl mb-8">
+        <h2 className="text-xl font-bold text-amber-100 mb-3">🎮 Hoe speel je dit spel?</h2>
+        <p className="text-amber-100 mb-2"><strong>Doel:</strong> Onderzoek verschillende graven en leer over Bronstijd-begrafenisgebruiken</p>
+        <p className="text-amber-100 mb-2"><strong>Hoe:</strong> Klik op "Analyseer" bij elk graf om meer informatie te krijgen</p>
+        <p className="text-amber-100 mb-2"><strong>Navigeren:</strong> Gebruik de pijlen om naar andere graven te gaan</p>
+        <p className="text-amber-100"><strong>Eindstap:</strong> Als je alle graven hebt onderzocht, beantwoord de reflectievragen</p>
+        <p className="text-amber-100 text-sm mt-2">💡 <em>Graven vertellen verhalen! Je zult merken dat de grootte en decoratie veel zeggen over iemands status.</em></p>
+      </div>
       <p className="text-stone-300 mb-8 text-lg">Analyseer meerdere graven en ontdek sociale verschillen, machtstructuren en geloof</p>
       
       {/* Huiding voortgang */}

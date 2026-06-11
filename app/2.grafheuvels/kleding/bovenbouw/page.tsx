@@ -68,7 +68,14 @@ export default function KledingBoven() {
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black dark:text-white grid grid-cols-3 gap-4">
             <div className="items-left justify-left">
                 <h1 className="text-2xl font-bold mb-4">Kleding Bovenbouw</h1>
-                <p className="mb-4">je vader heeft jouw de taak gegeven als bewaker laat de mensen met bekende kledingstukken binnen en laat andere uit over 2 minuten komt de volgende waak rotatie</p>
+                <div className="bg-blue-100 border-2 border-blue-500 rounded-lg p-4 mb-4">
+                    <h2 className="text-lg font-bold text-blue-800 mb-2">🎮 Hoe speel je dit spel?</h2>
+                    <p className="text-blue-900 mb-2"><strong>Doel:</strong> Laat bezoekers met juiste bronzijdse kleding door!</p>
+                    <p className="text-blue-900 mb-2"><strong>Je rol:</strong> Je bent wachter - raad of iemands kledingset overeenkomt met jouw voorbeeld</p>
+                    <p className="text-blue-900"><strong>Knoppen:</strong> Klik "Ja" (goed) of "Nee" (fout) voor elke bezoekerscombinatie</p>
+                    <p className="text-blue-900 text-sm mt-2">⏱️ <em>Je hebt 2 minuten voor alle checks!</em></p>
+                </div>
+                <p className="mb-4">Je vader heeft jouw de taak gegeven als bewaker laat de mensen met bekende kledingstukken binnen en laat andere uit over 2 minuten komt de volgende waak rotatie</p>
                 <p className="text-lg">Tijd over: {timeLeft} seconden</p>
             </div>
             <div className="items-center justify-center">

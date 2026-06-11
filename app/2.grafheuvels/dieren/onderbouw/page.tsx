@@ -77,9 +77,16 @@ export default function DierenOnder() {
       <div className="flex w-full max-w-6xl gap-8">
         <div className="w-1/2 flex flex-col items-center gap-6">
           <div className="text-center">
-            <h2>Dieren Onderbouw</h2>
+            <h2 className="text-2xl font-bold mb-4">Dieren Onderbouw</h2>
+            <div className="bg-green-100 border-2 border-green-600 rounded-lg p-4 mb-4 w-full">
+              <h3 className="text-lg font-bold text-green-800 mb-2">🎮 Hoe speel je dit spel?</h3>
+              <p className="text-green-900 mb-2"><strong>Doel:</strong> Sorteer alle dieren naar hun juiste omgeving</p>
+              <p className="text-green-900 mb-2"><strong>Hoe:</strong> Sleep elk dier naar de juiste zone</p>
+              <p className="text-green-900 mb-2"><strong>Wilde dieren:</strong> Hert, Wild Zwijn, Vos</p>
+              <p className="text-green-900"><strong>Boerderijedieren:</strong> Schaap, Rund</p>
+              <p className="text-green-900 text-sm mt-2">💡 <em>Tip: Denk na over wat deze dieren eten en waar ze natuurlijk voorkomen!</em></p>
+            </div>
             <p>Welkom bij de dieren voor onderbouw.</p>
-            <p>Sleep de dieren naar de juiste plek: wild of boerderij.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             <Image src="/dieren/hert.png" alt="Hert" data-transfer="hert" width={100} height={100} draggable={true} onDragStart={handleDragStart}/>
