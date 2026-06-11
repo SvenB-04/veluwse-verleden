@@ -100,8 +100,7 @@ export default function GrafheuvelsOnder() {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen">
-            <div className="flex flex-col items-center justify-center h-screen">
-                <h1 className="text-3xl font-bold mb-6">Grafheuvels Onderbouw</h1>
+            <h1 className="text-3xl font-bold mb-6">Grafheuvels Onderbouw</h1>
                 <div className="bg-purple-100 border-2 border-purple-600 rounded-lg p-6 max-w-2xl mb-6">
                   <h2 className="text-xl font-bold text-purple-800 mb-3">🎮 Hoe speel je dit spel?</h2>
                   <p className="text-purple-900 mb-2"><strong>Doel:</strong> Bouw een grafheuvel door items in de juiste volgorde te plaatsen</p>
